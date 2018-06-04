@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Java</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	
+    <!-- Custom styles for this template -->
+    <link href="../css/custom.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="../prettify/prettify.js" ></script>
+	<link href="../prettify/prettify.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="custheader">
+          <h3>Java</h3>
+    </div>
+  </nav>
+  
+   <div class="panel-group" id="accordion">
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="text-decoration:none"><h4>Is Java platform independent?</h4></a></h4></div> <div id="collapse1" class="panel-collapse collapse"><div class="panel-body">	  
+<p>Yes. Java is a platform independent language. We can write java code on one platform and run it on another platform. For e.g. we can write and compile the java code on windows and can run it on Linux or any other supported platform. This is one of the main features of java.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="text-decoration:none"><h4>What is class?</h4></a></h4></div><div id="collapse2" class="panel-collapse collapse"><div class="panel-body">
+<p>Class is nothing but a template that describes the data and behavior associated with instances of that class.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="text-decoration:none"><h4>What is Access Modifiers in Java?</h4></a></h4></div><div id="collapse3" class="panel-collapse collapse"><div class="panel-body">
+<p><b>Access Modifiers</b> are the keywords in java by which we can set the level of access for class, methods, variables and constructors. There are 4 different access modifiers available in java.<br><br><b>Public:</b> The public access modifier is accessible everywhere.<br><br><b>Private:</b> The private access modifier is accessible only within class. We cannot access it from other classes or sub classes of even same package.<br>Protected: protected methods can be accessed from classes of same package or sub classes of that class.<br><br><b>No Access Modifier or Default Access Modifier:</b> If you don't use any modifier, it is treated as default access modifier. The default modifier is accessible only within package.<br><br>The following table shows the access to members permitted by each modifier.<br>
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+<table class="tftable" border="1">
+<tr><th>Modifier</th><th>Class</th><th>Package</th><th>Subclass</th><th>World</th></tr>
+<tr><td>Public</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr>
+<tr><td>Protected</td><td>Y</td><td>Y</td><td>Y</td><td>N</td></tr>
+<tr><td>No Modifier</td><td>Y</td><td>Y</td><td>N</td><td>N</td></tr>
+<tr><td>Private</td><td>Y</td><td>N</td><td>N</td><td>N</td></tr>
+</table></p></div></div></div>
+  
+   
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="text-decoration:none"><h4>What are local variables in Java ?</h4></a></h4></div><div id="collapse4" class="panel-collapse collapse"><div class="panel-body">
+<p>In java all variables which are declared inside a block, a method or a constructor are called local variables. Local variables must be initialized before using them.</p>
+<p><strong>Example:</strong></p>
+<pre class="prettyprint">public class Test{<br>&ensp;public void myAge(){<br>&ensp;&ensp;int age=0;<br>&ensp;&ensp;age=age + 20;<br>&ensp;&ensp;System.out.println("My age is: " + age);<br>&ensp;}<br><br>&ensp;public static void main(String args[]){<br>&ensp;&ensp;Test test=new Test();<br>&ensp;&ensp;test.myAge();<br>&ensp;}<br>}</pre>
+<p>In the above example, age is a local variable. This is declared inside myAge() method and its scope is limited to this method only.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5" style="text-decoration:none"><h4>What are instance variable in Java?</h4></a></h4></div><div id="collapse5" class="panel-collapse collapse"><div class="panel-body">
+<p>In java, variables which are declared at class level outside a method or constructor or any block are called instance variables. Instance variables need not to initialize before using them, instance variables are automatically initialized to their default value. Each instance of a class has their own copy of instance variables.</p>
+<p><strong>Example:</strong></p>
+<pre class="prettyprint">public class Test{<br><br>&ensp;int age;<br><br>&ensp;public void myAge(){<br>&ensp;&ensp;age=age + 20;<br>&ensp;&ensp;System.out.println("My age is: " + age);<br>&ensp;}<br><br>&ensp;public static void main(String args[]){<br>&ensp;&ensp;Test test=new Test();<br>&ensp;&ensp;test.myAge();<br>&ensp;}<br>}</pre>
+<p>In the above example, age is an instance variable, since it is declared outside myAge() method.</p></div></div></div>
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6" style="text-decoration:none"><h4>What are static variable in Java?</h4></a></h4></div><div id="collapse6" class="panel-collapse collapse"><div class="panel-body">
+<p>Static variables or Class variables are declared with the static keyword in a class, but outside a method, constructor or a block. <br>Static variables can be accessed by calling with the class name <em>ClassName.VariableName.</em></p>
+<p><strong>Example:</strong></p>
+<pre class="prettyprint">public class Test{<br><br>&ensp;static int age;<br><br>&ensp;public void myAge(){<br>&ensp;&ensp;age=age + 20;<br>&ensp;&ensp;System.out.println("My age is : " + age);<br>&ensp;}<br><br>&ensp;public static void main(String args[]){<br>&ensp;&ensp;Test test=new Test();<br>&ensp;&ensp;test.myAge();<br>&ensp;}<br>}</pre>
+</div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse7" style="text-decoration:none"><h4>What if the main method is declared as private?</h4></a></h4></div><div id="collapse7" class="panel-collapse collapse"><div class="panel-body">
+<p>We can declare main method as private. It compiles without any errors, but in runtime, it will say main method is not public.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse8" style="text-decoration:none"><h4>In System.out.println(), what is System, out and println?</h4></a></h4></div><div id="collapse8" class="panel-collapse collapse"><div class="panel-body">
+<p>‘System’ is a predefined final class, ‘out’ is a Print Stream object and ‘println’ is a built-in overloaded method in the out object.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse9" style="text-decoration:none"><h4>What if I write static public void instead of public static void?</h4></a></h4></div><div id="collapse9" class="panel-collapse collapse"><div class="panel-body">
+<p>The Program will compile and will work properly.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse10" style="text-decoration:none"><h4>Why main method is static in Java?</h4></a></h4></div><div id="collapse10" class="panel-collapse collapse"><div class="panel-body">
+<p>Main method is static since Java virtual Machine can call it without creating any instance of class which contains main method. <br>
+If main method were not declared static than JVM has to create instance of main Class and since constructor can be overloaded and can have arguments there would not be any certain and consistent way for JVM to find main method in Java.
+</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse11" style="text-decoration:none"><h4>Why main method is public in Java?</h4></a></h4></div><div id="collapse11" class="panel-collapse collapse"><div class="panel-body">
+<p>Java has several access modifiers. Any method or variable which is declared as public in Java can be accessible from outside of that class as well. So main method is public in nature. JVM can easily access and execute it.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse12" style="text-decoration:none"><h4>What is the base or super class of all classes?</h4></a></h4></div><div id="collapse12" class="panel-collapse collapse"><div class="panel-body">
+<p>‘Object’ class which resides in java.lang package is the base class for all classes in java; it means every class written in java extends Object class by default.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse13" style="text-decoration:none"><h4>What is Java Package?</h4></a></h4></div><div id="collapse13" class="panel-collapse collapse"><div class="panel-body">
+<p><ul><li>A package is a collection of related classes.</li><li>It helps you to organize your classes into a folder structure and make it easy to locate and use them.</li><li>More importantly, it helps to improve reusability.</li></ul></p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse14" style="text-decoration:none"><h4>What are the primitive data types?</h4></a></h4></div><div id="collapse14" class="panel-collapse collapse"><div class="panel-body">
+<p>Primitive data types are predefined by the language and named by a keyword. There are eight primitive data types supported by Java. They are byte, short, char, int, long, Boolean, float and double. String is an object and not a primitive data type.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse15" style="text-decoration:none"><h4>What is difference between wait and sleep?</h4></a></h4></div><div id="collapse15" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>Sleep():</strong><br>It is a static method on Thread class. <br>
+It makes the current thread into the "Not Runnable" state for specified amount of time. During this time, the thread keeps the lock (monitors) it has acquired.<br><br>	
+<strong>Wait():</strong><br>It is a method on Object class. <br>It makes the current thread into the "Not Runnable" state. Wait is called on an object, not a thread. Before calling Wait() method, the object should be synchronized, means the object should be inside synchronized block. The call to Wait() releases the acquired lock.
+</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse16" style="text-decoration:none"><h4>What is Encapsulation?</h4></a></h4></div><div id="collapse16" class="panel-collapse collapse"><div class="panel-body">
+<p>Encapsulation is a process of binding or wrapping the data and the codes into a single entity. This keeps the data safe from outside interface and misuse. Objects allow procedures to be encapsulated with their data to reduce potential interference. One way to think about encapsulation is as a protective wrapper that prevents code and data from being arbitrarily accessed by other code defined outside the wrapper.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse17" style="text-decoration:none"><h4>What is Polymorphism and what are the types of it?</h4></a></h4></div><div id="collapse17" class="panel-collapse collapse"><div class="panel-body">
+<p>Polymorphism is the ability of an object to take many forms.<br><strong>Polymorphism exists in three distinct forms in Java:</strong><br>
+<ul><li>Method overloading</li><li>Method overriding through inheritance</li><li>Method overriding through the Java interface</li></ul></p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse18" style="text-decoration:none"><h4>What is inheritance?</h4></a></h4></div><div id="collapse18" class="panel-collapse collapse"><div class="panel-body">
+<p><ul><li>The process by which one class acquires the properties and functionalities (methods) of another class.</li><li>The idea behind inheritance in java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of parent class, and you can add new methods and fields also.</li><li>Inheritance represents the <strong>IS-A relationship, also known as parent-child relationship.</strong></li><li>The purpose of Inheritance is for Method Overriding (so runtime polymorphism can be achieved) and for Code Reusability.</li></p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse19" style="text-decoration:none"><h4>Does Java support Multiple Inheritances?</h4></a></h4></div><div id="collapse19" class="panel-collapse collapse"><div class="panel-body">
+<p>When a class extends more than one classes then it is called multiple inheritance. Java doesn’t support multiple inheritance whereas C++ supports it, this is one of the difference between java and C++.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse20" style="text-decoration:none"><h4>What is Abstract class?</h4></a></h4></div><div id="collapse20" class="panel-collapse collapse"><div class="panel-body">
+<p>An abstract class is a class which can’t be instantiated (we cannot create the object of abstract class), we can only extend such classes. It provides the generalized form that will be shared by all of its subclasses, leaving it to each subclass to fill in the details. We can achieve partial abstraction using abstract classes, to achieve full abstraction we use interfaces.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse21" style="text-decoration:none"><h4>What is Garbage collection?</h4></a></h4></div><div id="collapse21" class="panel-collapse collapse"><div class="panel-body">
+<p>In Java destruction of object from memory is done automatically by the JVM. When there is no reference to an object, then that object is assumed to be no longer needed and the memory occupied by the object are released. This technique is called <strong>Garbage Collection</strong>. This is accomplished by the JVM.<br><br>
+The Garbage Collection cannot be forced explicitly. We may request JVM for garbage collection by calling <strong>System.gc()</strong> method. But This does not guarantee that JVM will perform the garbage collection.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse22" style="text-decoration:none"><h4>What is Constructor?</h4></a></h4></div><div id="collapse22" class="panel-collapse collapse"><div class="panel-body">
+<p><ul><li>A constructor is a special method whose task is to initialize the object of its class.</li><li>It is special because its name is the same as the class name. </li><li>They do not have return types, not even void and therefore they cannot return values.</li><li>They cannot be inherited, though a derived class can call the base class constructor. </li><li>Constructor is invoked whenever an object of its associated class is created.</li></p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse23" style="text-decoration:none"><h4>What is method overloading in java?</h4></a></h4></div><div id="collapse23" class="panel-collapse collapse"><div class="panel-body">
+<p>If two or more method in a class have same name but different parameters, it is known as method overloading.<br><br>Method overloading is one of the ways through which java supports polymorphism. Method overloading can be done by changing number of arguments or by changing the data type of arguments. If two or more method have same name and same parameter list but differs in return type are not said to be overloaded method.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse24" style="text-decoration:none"><h4>What is method overriding in Java?</h4></a></h4></div><div id="collapse24" class="panel-collapse collapse"><div class="panel-body">
+<p>If subclass (child class) has the same method as declared in the parent class, it is known as method overriding in java. <br><br>
+In other words, If subclass provides the specific implementation of the method that has been provided by one of its parent class, it is known as method overriding.<br><br>
+<strong>Rules for Method Overriding:</strong><ol><li>Method must have same name as in the parent class</li><li>Method must have same parameter as in the parent class.</li><li>Must be IS-A relationship (inheritance).</li></ol></p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse25" style="text-decoration:none"><h4>Difference between method overloading and overriding?</h4></a></h4></div><div id="collapse25" class="panel-collapse collapse"><div class="panel-body">
+
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+<table class="tftable" border="1">
+<tr><th>No</th><th>Method Overloading</th><th>Method Overriding</th></tr>
+<tr><td>1</td><td>Method overloading is used to increase the readability of the program.</td><td>Method overriding is used to provide the specific implementation of the method that is already provided by its super class.</td></tr>
+<tr><td>2</td><td>Method overloading is performed within class.</td><td>Method overriding occurs in two classes that have IS-A (inheritance) relationship.</td></tr>
+<tr><td>3</td><td>In case of method overloading, parameter must be different.</td><td>In case of method overriding, parameter must be same.</td></tr>
+<tr><td>4</td><td>Method overloading is the example of compile time polymorphism.</td><td>Method overriding is the example of run time polymorphism.</td></tr>
+<tr><td>5</td><td>In java, method overloading can't be performed by changing return type of the method only. Return type can be same or different in method overloading. But you must have to change the parameter.</td><td>Return type must be same  in method overriding.</td></tr>
+</table></div></div></div>
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse26" style="text-decoration:none"><h4>Is it possible to overload main() method of a class?</h4></a></h4></div><div id="collapse26" class="panel-collapse collapse"><div class="panel-body">
+<p>Yes, we can overload main() method as well.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse27" style="text-decoration:none"><h4>Can we override a static method?</h4></a></h4></div><div id="collapse27" class="panel-collapse collapse"><div class="panel-body">
+<p>No, we cannot override a static method.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse28" style="text-decoration:none"><h4>Can we override java main method?</h4></a></h4></div><div id="collapse28" class="panel-collapse collapse"><div class="panel-body">
+<p>No, because main is a static method.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse29" style="text-decoration:none"><h4>Can you override private or static method in Java?</h4></a></h4></div><div id="collapse29" class="panel-collapse collapse"><div class="panel-body">
+<p>You cannot override private or static method in Java, if you create similar method with same return type and same method arguments that's called method hiding.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse30" style="text-decoration:none"><h4>What is a List interface in Java?</h4></a></h4></div><div id="collapse30" class="panel-collapse collapse"><div class="panel-body">
+<p>List interface is a part of Java Collections API, List interface extends Collection interface provides support for ordered collections of Objects. There are three well known implementation classes for List interface i.e. ArrayList, Vector and LinkedList , all these classes provides an ordered collection of objects and support duplicate values. <br>
+<ol><li><strong> ArrayList:</strong> ArrayList is an grow able array with fast iteration and fast random access. It is an ordered by index collection and is not sorted in nature. It can be considered over linkedlist when we need more iteration and random access and less insertion or deletion.</li>
+<li><strong>Vector:</strong> Vector are almost as same as the ArrayList except that, methods of an Vector are synchronized and hence safe to use in a thread environment. One should use arraylist over vector if there is no need of thread safety.</strong>
+<li><strong>LinkedList:</strong> Linked list is another implementation of List interface in java, elements in a linked list are ordered by index and are double-linked to each other. Because of this it provides adding or removing elements from both sides and hence it may iterate slow than ArrayList but insertion and deletion is much more fast that ArrayList.</li></p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse31" style="text-decoration:none"><h4>What is a Set interface in Java?</h4></a></h4></div><div id="collapse31" class="panel-collapse collapse"><div class="panel-body">
+<p>Like List interface Set is another interface which is a part of Java Collections API and extends Collection interface, it does not permit duplicate values in it. The well known implementation classes for a Set interface are HashSet and TreeSet. <br><ol><li><strong>HashSet:</strong> A HashSet is an unsorted and unordered set, it uses the hash code of the objects being inserted, so the performance all depends on how well the hash code implementation is. This ensures uniqueness of elements and does not allow duplicates.</li><li><strong>TreeSet:</strong> TreeSet is a sorted Set which ensures elements will be in ascending order naturally, it uses a red-black tree structure to store elements. Optionally we can construct a TreeSet with descending ordering of elements.</li><li><strong>LinkedHashSet:</strong>LinkedHashSet is an ordered version of HashSet, when we uses HashSet we cannot predict the order of iteration, while in LinkedHashSet the order of elements remains unchanged.</li></ol></p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse32" style="text-decoration:none"><h4>What is difference between List and Set?</h4></a></h4></div><div id="collapse32" class="panel-collapse collapse"><div class="panel-body">
+<p><ul><li>Set is unordered collection where List is ordered collection based on zero based index.</li><li>List allows duplicate elements but Set does not allow duplicates.</li><li>List does not prevent inserting null elements (as many you like), but Set will allow only one null element.</li></ul></p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse33" style="text-decoration:none"><h4>What is a Map interface in Java?</h4></a></h4></div><div id="collapse33" class="panel-collapse collapse"><div class="panel-body">
+<p>Like List and Set interfaces, Map is also a part of Java Collections API but it does not extend Collection interface. Map provides a key value pair of Objects and some implementation like HashMap permits null whereas some implementation like HashTable does not allows null. HashMap, TreeMap and HashTable are three well known implementation of a Map interface. <br><ol><li><strong>HashMap:</strong> HashMap provides an unsorted and unordered collection to store key value pairs. It cares about uniqueness of keys, HashMap allows one null key and multiple null values in it.</li><li><strong>HashTable:</strong> HashTable is a synchronized version of HashMap, all the methods in a HashTable are thread safe. HashTable does not allows null keys or null values.</li><li><strong>TreeMap:</strong> Like TreeSet, TreeMap is an ordered Map, which persists elements in ascending order.</li></ol></p></div></div></div>
+
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse34" style="text-decoration:none"><h4>What is difference between Arrays and ArrayList ? </h4></a></h4></div><div id="collapse34" class="panel-collapse collapse"><div class="panel-body">
+<p>Arrays are created of fix size whereas ArrayList is dynamic in nature and can vary its length. Also the size of array cannot be incremented or decremented. But with ArrayList the size is variable.<br><br>Once the array is created elements cannot be added or deleted from it. But with ArrayList the elements can be added and deleted at runtime. 
+ArrayList is one dimensional but array can be multidimensional. <br><br>Array can contain objects of a single data type or class. ArrayList if not used with generic can contain objects of different classes</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse35" style="text-decoration:none"><h4>What is difference between Interface and Abstract Class?</h4></a></h4></div><div id="collapse35" class="panel-collapse collapse"><div class="panel-body">
+<p>
+
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+<table class="tftable" border="1">
+<tr><th>No</th><th>Features</th><th>Interface</th><th>Abstract Class</th></tr>
+<tr><td>1</td><td>Definition</td><td>Interfaces are rules (Rules because you must give an implementation to them and that you can't ignore or avoid, so that are imposed like rules) which works as a common understanding document among the various teams.</td><td>Abstract declarations are like rules to be followed and concrete implementations are like guidelines (You can use that as it is or you can ignore it by overriding and giving your own choice implementation to it).</td></tr>
+<tr><td>2</td><td>Relationship</td><td>Implements several interfaces.</td><td>Extends only one abstract class.</td></tr>
+<tr><td>3</td><td>Instance variables</td><td>Cannot have</td><td>Can have</td></tr>
+<tr><td>4</td><td>Constructor</td><td>Cannot have</td><td>Can have</td></tr>
+</table></p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse36" style="text-decoration:none"><h4>What is difference between List and ArrayList?</h4></a></h4></div><div id="collapse36" class="panel-collapse collapse"><div class="panel-body">
+<p><style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+<table class="tftable" border="1">
+<tr><th>No</th><th>List</th><th>ArrayList</th></tr>
+<tr><td>1</td><td>It is an Interface.</td><td>It is an implementation of List interface.</td></tr>
+<tr><td>2</td><td>Length is fixed. You can not resize it.</td><td>Length is dynamic in nature. You can resize it.</td></tr>
+<tr><td>3</td><td>Stores both primitives and Objects.</td><td>You can not store primitives in ArrayList.</td></tr>
+</table></p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse37" style="text-decoration:none"><h4>What is this keyword?</h4></a></h4></div><div id="collapse37" class="panel-collapse collapse"><div class="panel-body">
+<p>‘this’ is a keyword in Java. Which can be used inside method or constructor of class. ‘this’ works as a reference to current object whose method or constructor is being invoked. 'this' keyword can be used to refer any member of current object from within an instance method or a constructor.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse38" style="text-decoration:none"><h4>What is the difference between final, finally and finalize in Java ?</h4></a></h4></div><div id="collapse38" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>final:</strong><br>final is a keyword. The variable declared as final should be 	initialized only once and cannot be changed. Java classes	declared as final cannot be extended. Methods declared as final cannot be overridden.<br><br><strong>finally:</strong><br>	finally is a block. The finally block always executes when the try block exits. This ensures that the finally block is executed even if an unexpected exception occurs. But finally is useful for 	more than just exception handling - it allows the programmer to avoid having cleanup code accidentally bypassed by a return, continue, or break. Putting cleanup code in a finally block is always a good practice, even when no exceptions are anticipated.<br><br><strong>finalize:</strong><br>finalize is a method. The finalize() method of a Java class is useful during garbage collection. Java does automatic garbage collection and periodically reclaims memory occupied by objects that are no longer referenced by any other object. If an object utilizes a resource other than memory, such as a file or a handle to another object that uses system resources then it is important that the resource should be freed before the object is reclaimed and recycled by garbage collector. A finalizer (finalize() method) added to any class is called before the garbage collector sweeps away the object. However, in practice we should not rely on the finalize() method for short supply resources because finalize() only guarantees that it will be called during garbage collection but when will garbage collector run, it depends upon system. So, if a resource needs to be closed as soon as you are done using it, you need to close it manually. Supply a method of your own for what needs to be immediately closed after use.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse39" style="text-decoration:none"><h4>What is JDBC?</h4></a></h4></div><div id="collapse39" class="panel-collapse collapse"><div class="panel-body">
+<p>JDBC is a Java API that is used to connect and execute query to the database. JDBC API uses jdbc drivers to connect to the database.</p></div></div></div>
+
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse40" style="text-decoration:none"><h4>What is the difference between Collection and Collections?</h4></a></h4></div><div id="collapse40" class="panel-collapse collapse"><div class="panel-body">
+<p>Collection is an interface whereas Collections is a class. Collection interface provides normal functionality of data structure to List, Set and Queue. But, Collections class is to sort and synchronize collection elements.</p></div></div></div>
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse41" style="text-decoration:none"><h4>What is an Exception?</h4></a></h4></div><div id="collapse41" class="panel-collapse collapse"><div class="panel-body">
+<p>An Exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program’s instructions . When an exception occurs program processing gets terminated and doesn’t continue further. In such cases we get a system generated error message. The good thing about exceptions is that they can be handled.</p></div></div></div>
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse42" style="text-decoration:none"><h4>What is difference between an exception and an error?</h4></a></h4></div><div id="collapse42" class="panel-collapse collapse"><div class="panel-body">
+<p>Errors indicate serious problems and abnormal conditions that most applications should not try to handle. Error defines problems that are not expected to be caught under normal circumstances by our program. Few examples:<br><ul><li>Memory error</li><li>Hardware error</li><li>JVM error</li></ul>Exceptions are conditions within the code. A developer can handle such conditions and take necessary corrective actions. Few examples:<br><ul><li>DivideByZeroException</li><li>NullPointerException</li><li>ArithmeticException</li><li>ArrayIndexOutOfBoundsException</li></ul></p></div></div></div>
+  
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse47" style="text-decoration:none"><h4>Exceptions are defined in which java package?</h4></a></h4></div><div id="collapse47" class="panel-collapse collapse"><div class="panel-body">
+<p>All the exceptions are subclasses of java.lang.Exception</p></div></div></div>
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse43" style="text-decoration:none"><h4>Explain about Java Exception Heirarchy?</h4></a></h4></div><div id="collapse43" class="panel-collapse collapse"><div class="panel-body">
+<p>Throwable is the base class of all exceptions in java. Throwable has two direct sub classes namely Exception and Error. These two classes creates clean separation of exception types. Exception and all its sub classes are that can be handled within the program. Error and all its sub classes are expected to be handled by the program. Error and its sub type are used by Java’s run time system to indicate problems related to run time environment like out of memory or stack overflow. For example, out of memory problem (OutOfMemoryError) cannot be fixed using program code and is not expected to be handled by the program.<br><img src="Exception.png" align="absmiddle" width="75%"></p></div></div></div>
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse44" style="text-decoration:none"><h4>Explain about various types of Exceptions & Errors in Java?</h4></a></h4></div><div id="collapse44" class="panel-collapse collapse"><div class="panel-body">
+<p><h4>Runtime exceptions</h4><br>
+The java.lang package defines the following standard runtime exception classes: <br><br>
+<b>ArithmeticException</b><br>This exception is thrown to indicate an exceptional arithmetic condition, such as integer division by zero. <br><br>
+<b>ArrayIndexOutOfBoundsException</b><br>This exception is thrown when an out-of-range index is detected by an array object. An out-of-range index occurs when the index is less than zero or greater than or equal to the size of the array. <br><br>
+<b>ArrayStoreException</b><br>This exception is thrown when there is an attempt to store a value in an array element that is incompatible with the type of the array. <br><br>
+<b>ClassCastException</b><br>This exception is thrown when there is an attempt to cast a reference to an object to an inappropriate type. <br><br>
+<b>IllegalArgumentException</b><br>This exception is thrown to indicate that an illegal argument has been passed to a method. <br><br>
+<b>IllegalMonitorStateException</b><br>This exception is thrown when an object's wait(), notify(), or notifyAll() method is called from a thread that does not own the object's monitor. <br><br>
+<b>IllegalStateException</b><br>This exception is thrown to indicate that a method has been invoked when the run-time environment is in an inappropriate state for the requested operation. <br><br>
+<b>IllegalThreadStateException</b><br>This exception is thrown to indicate an attempt to perform an operation on a thread that is not legal for the thread's current state, such as attempting to resume a dead thread. <br><br>
+<b>IndexOutOfBoundsException</b><br>The appropriate subclass of this exception (i.e., ArrayIndexOutOfBoundsException or StringIndexOutOfBoundsException) is thrown when an array or string index is out of bounds. <br><br>
+<b>NegativeArraySizeException</b><br>This exception is thrown in response to an attempt to create an array with a negative size. <br><br>
+<b>NullPointerException</b><br>This exception is thrown when there is an attempt to access an object through a null object reference. This can occur when there is an attempt to access an instance variable or call a method through a null object or when there is an attempt to subscript an array with a null object. <br><br>
+<b>NumberFormatException</b><br>This exception is thrown to indicate that an attempt to parse numeric information in a string has failed. <br><br>
+<b>RuntimeException</b><br>The appropriate subclass of this exception is thrown in response to a runtime error detected at the virtual machine level. Because these exceptions are so common, methods that can throw objects that are instances of RuntimeException or one of its subclasses are not required to declare that fact in their throws clauses. <br><br>
+<b>SecurityException</b><br>This exception is thrown in response to an attempt to perform an operation that violates the security policy implemented by the installed SecurityManager object. <br><br>
+<b>StringIndexOutOfBoundsException</b><br>This exception is thrown when a String or StringBuffer object detects an out-of-range index. An out-of-range index occurs when the index is less than zero or greater than or equal to the length of the string. <br><br>
+<h4>Other exceptions:</h4><br>
+The java.lang package defines the following standard exception classes that are not runtime exceptions: <br><br>
+<b>ClassNotFoundException</b><br>This exception is thrown to indicate that a class that is to be loaded cannot be found. <br><br>
+<b>CloneNotSupportedException</b><br>This exception is thrown when the clone() method has been called for an object that does not implement the Cloneable interface and thus cannot be cloned. <br><br>
+<h4>Exception:</h4><br>The appropriate subclass of this exception is thrown in response to an error detected at the virtual machine level. If a program defines its own exception classes, they should be subclasses of the Exception class. <br><br>
+<b>IllegalAccessException</b><br>This exception is thrown when a program tries to dynamically load a class (i.e., uses the forName() method of the Class class, or the findSystemClass() or the loadClass() method of the ClassLoader class) and the currently executing method does not have access to the specified class because it is in another package and not public. This exception is also thrown when a program tries to create an instance of a class (i.e., uses the newInstance() method of the Class class) that does not have a zero-argument constructor accessible to the caller. <br><br>
+<b>InstantiationException</b><br>This exception is thrown in response to an attempt to instantiate an abstract class or an interface using the newInstance() method of the Class class. <br><br>
+<b>InterruptedException</b><br>This exception is thrown to signal that a thread that is sleeping, waiting, or otherwise paused has been interrupted by another thread. <br><br>
+<b>NoSuchFieldException</b><br>This exception is thrown when a specified variable cannot be found. <br><br>
+<b>NoSuchMethodException</b><br>This exception is thrown when a specified method cannot be found. <br><br><h4>Errors</h4><br>
+The java.lang package defines the following standard error classes: <br><br>
+<b>AbstractMethodError</b><br>This error is thrown in response to an attempt to invoke an abstract method. <br><br>
+<b>ClassCircularityError</b><br>This error is thrown when a circular reference among classes is detected during class initialization. <br><br>
+<b>ClassFormatError</b><br>
+This error is thrown when an error is detected in the format of a file that contains a class definition. <br><br>
+<b>Error</b><br>
+The appropriate subclass of this error is thrown when an unpredictable error, such as running out of memory, occurs. Because of the unpredictable nature of these errors, methods that can throw objects that are instances of Error or one of its subclasses are not required to declare that fact in their throws clauses. <br><br>
+<b>ExceptionInInitializerError</b><br>This error is thrown when an unexpected exception is thrown in a static initializer. <br><br>
+<b>IllegalAccessError</b><br>This error is thrown when a class attempts to access a field or call a method it does not have access to. Usually this error is caught by the compiler; this error can occur at run-time if the definition of a class changes after the class that references it was last compiled. <br><br>
+<b>IncompatibleClassChangeError</b><br>This error or one of its subclasses is thrown when a class refers to another class in an incompatible way. This situation occurs when the current definition of the referenced class is incompatible with the definition of the class that was found when the referring class was compiled. For example, say class A refers to a method in class B. Then, after class A is compiled, the method is removed from class B. When class A is loaded, the run-time system discovers that the method in class B no longer exists and throws an error. <br><br>
+<b>InstantiationError</b><br>This error is thrown in response to an attempt to instantiate an abstract class or an interface. Usually this error is caught by the compiler; this error can occur at run-time if the definition of a class is changed after the class that references it was last compiled. <br><br>
+<b>InternalError</b><br>This error is thrown to signal an internal error within the virtual machine. <br><br>
+<b>LinkageError</b><br>The appropriate subclass of this error is thrown when there is a problem resolving a reference to a class. Reasons for this may include a difficulty in finding the definition of the class or an incompatibility between the current definition and the expected definition of the class. <br><br>
+<b>NoClassDefFoundError</b><br>This error is thrown when the definition of a class cannot be found. <br><br>
+<b>NoSuchFieldError</b><br>This error is thrown in response to an attempt to reference an instance or class variable that is not defined in the current definition of a class. Usually this error is caught by the compiler; this error can occur at run-time if the definition of a class is changed after the class that references it was last compiled. <br><br>
+<b>NoSuchMethodError</b><br>This error is thrown in response to an attempt to reference a method that is not defined in the current definition of a class. Usually this error is caught by the compiler; this error can occur at run-time if the definition of a class is changed after the class that references it was last compiled. <br><br>
+<b>OutOfMemoryError</b><br>This error is thrown when an attempt to allocate memory fails. <br><br>
+<b>StackOverflowError</b><br>This error is thrown when a stack overflow error occurs within the virtual machine. <br><br>
+<b>ThreadDeath</b><br>This error is thrown by the stop() method of a Thread object to kill the thread. Catching ThreadDeath objects is not recommended. If it is necessary to catch a ThreadDeath object, it is important to re-throw the object so that it is possible to cleanly stop the catching thread. <br><br>
+<b>UnknownError</b><br>This error is thrown when an error of unknown origins is detected in the run-time system. <br><br>
+<b>UnsatisfiedLinkError</b><br>This error is thrown when the implementation of a native method cannot be found. <br><br>
+<b>VerifyError</b><br>This error is thrown when the byte-code verifier detects that a class file, though well-formed, contains some sort of internal inconsistency or security problem. <br><br>
+<b>VirtualMachineError</b><br>The appropriate subclass of this error is thrown to indicate that the Java virtual machine has encountered an error. <br><br></p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse45" style="text-decoration:none"><h4>What is difference between Checked and Unchecked Exception in Java?</h4></a></h4></div><div id="collapse45" class="panel-collapse collapse"><div class="panel-body">
+<p><ol><li>Checked Exceptions should be handled in the code using try-catch block or else main() method should use throws keyword to let JRE know about these exception that might be thrown from the program. Unchecked Exceptions are not required to be handled in the program or to mention them in throws clause.</li><li>Exception is the super class of all checked exceptions whereas RuntimeException is the super class of all unchecked exceptions.</li><li>Checked exceptions are error scenarios that are not caused by program, for example FileNotFoundException in reading a file that is not present, whereas Unchecked exceptions are mostly caused by poor programming, for example NullPointerException when invoking a method on an object reference without making sure that it’s not null.</li></ol></p></div></div></div>
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse46" style="text-decoration:none"><h4>What are Java Exception Handling Keywords?</h4></a></h4></div><div id="collapse46" class="panel-collapse collapse"><div class="panel-body">
+<p>Java provides specific keywords for exception handling purposes, we will look after them first and then we will write a simple program showing how to use them for exception handling.<ol><li>throw – We know that if any exception occurs, an exception object is getting created and then Java runtime starts processing to handle them. Sometime we might want to generate exception explicitly in our code, for example in a user authentication program we should throw exception to client if the password is null. throw keyword is used to throw exception to the runtime to handle it.</li><br><li>throws – When we are throwing any exception in a method and not handling it, then we need to use throws keyword in method signature to let caller program know the exceptions that might be thrown by the method. The caller method might handle these exceptions or propagate it to its caller method using throws keyword. We can provide multiple exceptions in the throws clause and it can be used with main() method also.</li><br><li>try-catch – We use try-catch block for exception handling in our code. try is the start of the block and catch is at the end of try block to handle the exceptions. We can have multiple catch blocks with a try and try-catch block can be nested also. catch block requires a parameter that should be of type Exception.</li><br><li>finally – finally block is optional and can be used only with try-catch block. Since exception halts the process of execution, we might have some resources open that will not get closed, so we can use finally block. finally block gets executed always, whether exception occurred or not.</li></ol></p></div></div></div>
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse48" style="text-decoration:none"><h4>What is difference between throw and throws keyword in Java?</h4></a></h4></div><div id="collapse48" class="panel-collapse collapse"><div class="panel-body">
+<p>throws keyword is used with method signature to declare the exceptions that the method might throw whereas throw keyword is used to disrupt the flow of program and handing over the exception object to runtime to handle it.</p></div></div></div>
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse49" style="text-decoration:none"><h4>What is difference between ClassNotFoundException and NoClassDefFoundError?</h4></a></h4></div><div id="collapse49" class="panel-collapse collapse"><div class="panel-body"><p>Though both of these errors are related to missing classes in the classpath, the main difference between them is their root cause. ClassNotFoundExcpetion comes when you try to load a class at runtime by using Class.forName() or loadClass() and requested class is not present in classpath for example when you try to load MySQL or Oracle driver class and their JAR is not available, while in case of NoClassDefFoundError requested class was present at compile time but not available at runtime. Sometimes due to an exception during class initialization e.g. exception from static block causes NoClassDefFoundError when a failed-to-load class was later referenced by the runtime. </p></div></div></div>
+
+
+	 <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="cordova.js"></script>
+  	<script type="text/javascript" src="../js/script.js" ></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+  	<script>
+	 prettyPrint();
+	</script> 
+	<script>
+		$('#accordion').on('shown.bs.collapse', function () {
+
+  		var panel = $(this).find('.in');
+
+  		$('html, body').animate({
+        	scrollTop: panel.offset().top + (-170)
+  		}, 100);
+
+		});
+	</script>
+  </body>
+</html>

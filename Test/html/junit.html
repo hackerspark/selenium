@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>JUnit</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	
+    <!-- Custom styles for this template -->
+    <link href="../css/custom.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="../prettify/prettify.js" ></script>
+	<link href="../prettify/prettify.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="custheader">
+          <h3>JUnit</h3>
+    </div>
+  </nav>
+  
+ <div class="panel-group" id="accordion">
+   
+      <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="text-decoration:none"><h4>What is Junit?</h4></a></h4></div><div id="collapse1" class="panel-collapse collapse"><div class="panel-body">
+<p>JUnit is a unit testing framework for the Java programming language. JUnit has been important in the development of test-driven development, and is one of a family of unit testing frameworks.<br><br>The JUnit framework provides a ready-made test harness for executing unit tests as well as an API for reporting the success or failure status of a test.
+</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="text-decoration:none"><h4>What are the features of Junit?</h4></a></h4></div><div id="collapse2" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>The following are the features of JUnit:</strong><ul><li>JUnit is an open source framework which is used for writing test cases and executing them.</li><li>JUnit is very simple and easy to use and requires less time.</li><li>It provides Annotation support to identify the test methods.</li><li>It also provides Assertions for comparing actual and expected results.</li><li>Integration with popular tools Ant, maven and popular IDEs like Eclipse, Jbuilder.</li></ul></p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="text-decoration:none"><h4>What are the available JUnit annotations?</h4></a></h4></div><div id="collapse3" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>The following table gives an overview of the most important available annotations:</strong></p>
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+<table class="tftable" border="1">
+<tr><th>No</th><th>Annotation</th><th>Description</th></tr>
+<tr><td>1</td><td>@Test </td><td>The @Test annotation identifies a method as a test method.</td></tr>
+<tr><td>2</td><td>@Test (expected = Exception.class)</td><td>Fails if the method does not throw the named exception.</td></tr>
+<tr><td>3</td><td>@Test(timeout=100)</td><td>Fails if the method takes longer than 100 milliseconds.</td></tr>
+<tr><td>4</td><td>@Before </td><td>This method is executed before each test. It is used to prepare the test environment (e.g., read input data, initialize the class).</td></tr>
+<tr><td>5</td><td>@After</td><td>This method is executed after each test. It is used to clean up the test environment (e.g., delete temporary data, restore defaults). It can also save memory by cleaning up expensive memory structures.</td></tr>
+<tr><td>6</td><td>@BeforeClass</td><td>This method is executed once, before the start of all tests. It is used to perform time intensive activities, for example, to connect to a database. Methods marked with this annotation need to be defined as static to work with JUnit.</td></tr>
+<tr><td>7</td><td>@AfterClass</td><td>This method is executed once, after all tests have been finished. It is used to perform clean-up activities, for example, to disconnect from a database. Methods annotated with this annotation need to be defined as static to work with JUnit.</td></tr>
+<tr><td>8</td><td>@Ignore</td><td>Ignores the test method.</td></tr>
+</table></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="text-decoration:none"><h4>What are the available JUnit assertions?</h4></a></h4></div><div id="collapse4" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>The following table gives an overview of the assertions. Parameters in [] brackets are optional.</strong></p>
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+<table class="tftable" border="1">
+<tr><th>No</th><th>Assertion</th><th>Description</th></tr>
+<tr><td>1</td><td>fail(String)</td><td>Let the method fail. Might be used to check that a certain part of the code is not reached or to have a failing test before the test code is implemented. The String parameter is optional.</td></tr>
+<tr><td>2</td><td>assertTrue([message], boolean condition)</td><td>Checks that the Boolean condition is true.</td></tr>
+<tr><td>3</td><td>assertFalse([message], boolean condition)</td><td>Checks that the Boolean condition is false.</td></tr>
+<tr><td>4</td><td>assertEquals([String message], expected, actual)</td><td>Tests that two values are the same.</td></tr>
+<tr><td>5</td><td>assertEquals([String message], expected, actual, tolerance)</td><td>Test that float or double values match. The tolerance is the number of decimals which must be the same.</td></tr>
+<tr><td>6</td><td>assertNull([message], object)</td><td>Checks that the object is null.</td></tr>
+<tr><td>7</td><td>assertNotNull([message], object)</td><td>Checks that the object is not null.</td></tr>
+<tr><td>8</td><td>assertSame([String], expected, actual)</td><td>Checks that both variables refer to the same object.</td></tr>
+<tr><td>9</td><td>assertNotSame([String], expected, actual)</td><td>Checks that both variables refer to different objects.</td></tr>
+</table></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5" style="text-decoration:none"><h4>What is Test Suite?</h4></a></h4></div><div id="collapse5" class="panel-collapse collapse"><div class="panel-body">
+<p>A Test Suite is a grouping unit test cases together and running it. In JUnit, both @RunWith and @Suite annotations are used to run the suite test.</p></div></div></div>
+
+   
+      <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse7" style="text-decoration:none"><h4>What is @After and @AfterClass?</h4></a></h4></div><div id="collapse7" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>@After annotation:</strong><br><br>Syntax:<br><pre class="prettyprint">@After<br>public void myTest()</pre><br>This method should execute after each test and used for cleaning up the test and temporary data to avoid memory issues.<br><br><strong>@AfterClass annotation:</strong><br><br>Syntax:<br><br><pre class="prettyprint">@AfterClass<br>public static void myTest()</pre><br>This method should execute at the end, once all the tests are finished. Method should be declared static and executes only a single time. Mostly used for closing the database connection.</p></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse8" style="text-decoration:none"><h4>What is @Before and @BeforeClass?</h4></a></h4></div><div id="collapse8" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>@Before annotation:</strong><br><br>Syntax:<br><pre class="prettyprint">@Before<br>public void myTest()</pre><br>This method should execute before each test. Such methods are generally used for initialization before performing a actual test in test environment.<br><br><strong>@BeforeClass annotation:</strong><br><br>Syntax:<br><br><pre class="prettyprint">@BeforeClass<br>public static void myTest ()</pre><br>This method should execute before all the tests. It executes only once. Method should be declared static. Mostly used for database connectivity tasks before execution of any of the test.</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse9" style="text-decoration:none"><h4>What is @Test annotation?</h4></a></h4></div><div id="collapse9" class="panel-collapse collapse"><div class="panel-body">
+<p>@Test annotation is used to mark a method as test method, result of which is then compared with expected output to check whether the test is successful or not.<br><br>
+Syntax:<br><pre class="prettyprint">@Test<br>public void dividedByZeroExample()</pre></p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6" style="text-decoration:none"><h4>How do you ignore a test in JUnit?</h4></a></h4></div><div id="collapse6" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>@Ignore</strong> annotation is used to skip or ignore a test case/ test method.</p><pre class="prettyprint">public class JUnit_Ignore{<br><br>&ensp;@Ignore("Ignore this test")<br>&ensp;@Test<br>&ensp;public void TestOne(){<br>&ensp;&ensp; System.out.println("This test will not be executed");<br>&ensp;}<br><br>&ensp;@Test<br>&ensp;public void TestTwo(){<br>&ensp;&ensp; System.out.println("This test will be executed");<br>&ensp;}<br>}</pre></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse10" style="text-decoration:none"><h4>What are annotations?</h4></a></h4></div><div id="collapse10" class="panel-collapse collapse"><div class="panel-body">
+<p>Annotations are like meta-tags that you can add to your code and apply them to methods or in class. The annotation in JUnit gives us information about test methods, which methods are going to run before & after test methods, which methods run before & after all the methods, which methods or class will be ignore during execution.</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse11" style="text-decoration:none"><h4>What is expected annotation in JUnit?</h4></a></h4></div><div id="collapse11" class="panel-collapse collapse"><div class="panel-body">
+<p>We use "expected" with @Test annotation and specify the type of exceptions that are expected to be thrown when executing the test methods.<br><br>The below example which throws an exception called “ArithmeticException” when dividing two numbers with denominator value as 0. The test will pass since we handled the exception by “expected” annotation.</p>
+<pre class="prettyprint">@Test(expected=ArithmeticException.class)<br>public void dividedByZeroEx(){<br>&ensp;int e=1/0;<br>}</pre><br>When you run the test without “(expected = ArithmeticException.class)”, then it will throw the exception “java.lang.ArithmeticException: / by zero”. And the test will fail.<br><br><pre class="prettyprint">@Test<br>public void dividedByZeroExample2(){<br>&ensp;int e=1/0;<br>}</pre></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse12" style="text-decoration:none"><h4>What is Timeout Test in JUnit?</h4></a></h4></div><div id="collapse12" class="panel-collapse collapse"><div class="panel-body">
+<p>Some tests will take longer time then what we expect. To handle these tests by using “timeout” method and proceed to execute further tests.</p><pre class="prettyprint">@Test(timeout=5000) <br>public void timeOutExample(){<br>&ensp;System.out.println(“hello world”);<br>}</pre><p>The above test will wait for 5000 mille seconds.</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse13" style="text-decoration:none"><h4>What is Parameterized test in JUnit?</h4></a></h4></div><div id="collapse13" class="panel-collapse collapse"><div class="panel-body">
+<p>Parameterized tests are possible in JUnit and they provide us the liberty of passing parameters into the test classes.</p>
+
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+<table class="tftable" border="1">
+<tr><td>@RunWith(Parameterized.class)</td><td>For making a class parameterized.</td></tr>
+<tr><td>@Parameters</td><td>Parameterized class must have a static method for generating and returning a collection of array, this method should be marked with @Parameters annotation.</td></tr>
+</table></p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse14" style="text-decoration:none"><h4>What is the use of @Rule annotation?</h4></a></h4></div><div id="collapse14" class="panel-collapse collapse"><div class="panel-body">
+<p>@Rule annotation is used for creating objects, which later can be used in test methods.</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse15" style="text-decoration:none"><h4>What is JUnitCore class?</h4></a></h4></div><div id="collapse15" class="panel-collapse collapse"><div class="panel-body">
+<p>This class is mainly responsible for executing tests. The org.junit.runner.JUnitCore class has a runClasses() method, which allows us to run one or more test classes. As an output we get a Result (org.junit.runner.Result) object, which we use to filter out the test information.</p></div></div></div>
+  
+  </div>
+
+  
+
+
+  
+  
+  
+
+
+
+
+
+	 <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="cordova.js"></script>
+  	<script type="text/javascript" src="../js/script.js" ></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+  	<script>
+	 prettyPrint();
+	</script> 
+	<script>
+		$('#accordion').on('shown.bs.collapse', function () {
+
+  		var panel = $(this).find('.in');
+
+  		$('html, body').animate({
+        	scrollTop: panel.offset().top + (-170)
+  		}, 100);
+
+		});
+	</script>
+  </body>
+</html>

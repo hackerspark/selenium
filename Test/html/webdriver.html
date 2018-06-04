@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>WebDriver</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	
+    <!-- Custom styles for this template -->
+    <link href="../css/custom.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="../prettify/prettify.js" ></script>
+	<link href="../prettify/prettify.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="custheader">
+          <h3>WebDriver</h3>
+    </div>
+  </nav>
+  
+<div class="panel-group" id="accordion">
+
+      <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="text-decoration:none"><h4>What are the locators in Selenium?</h4></a></h4></div><div id="collapse1" class="panel-collapse collapse"><div class="panel-body">
+<p>Locator can be termed as an address that identifies a web element uniquely within the webpage. Thus, to identify web elements accurately and precisely we have different types of locators in Selenium:<br><ol><li>Id</li><li>Name</li><li>LinkText</li><li>Partial LinkText </li><li>Tag Name</li><li>Class name</li><li>CSS</li><li>xPath</li>
+</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="text-decoration:none"><h4>What are the limitations of Selenium?</h4></a></h4></div><div id="collapse2" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>Technical challenges with Selenium are:</strong><br><ul><li>Selenium supports only web based applications.</li><li>It does not support the Bitmap comparison.</li><li>For any reporting related capabilities have to depend on third party tools.</li><li>No vendor support for tool compared to commercial tools like QTP/UFT.</li><li>As there is no object repository concept in Selenium, maintainability of objects becomes difficult.</li></ul></p></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="text-decoration:none"><h4>What is WebDriver backed selenium?</h4></a></h4></div><div id="collapse3" class="panel-collapse collapse"><div class="panel-body">
+<p>WebDriver backed Selenium is an API that enables running Selenium 1.0 tests in WebDriver.</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5" style="text-decoration:none"><h4>What is the difference between “/” and “//” in xPath?</h4></a></h4></div><div id="collapse5" class="panel-collapse collapse"><div class="panel-body">
+<p>xPath is used to locate a web element based on its XML path. xPath can be used to locate HTML elements.<br><br><strong>Single Slash (/) –</strong> Single slash is used to create Xpath with absolute path i.e. the xPath would be created to start selection from the document node/start node.<br><br><strong>Double Slash (//) –</strong> Double slash is used to create xPath with relative path i.e. the xPath would be created to start selection from anywhere within the document.</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="text-decoration:none"><h4>What is Absolute and Relative xPath?</h4></a></h4></div><div id="collapse4" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>Absolute xPath:</strong> Writing the complete path of a specified element using single forward slash (‘/’) is known as Absolute xPath. It is time consuming and lengthy. Here the single slash (‘/’) represents immediate child. <br><br><strong>Example: </strong> html/body/div[7]/div[3]/div/div[2]/div[1]/span<br><br>
+<strong>Relative xPath:</strong> Writing the path of a specific element using double forward slash (‘//’) is known as Relative xPath. Here the double slash (‘//’) represents any child also called as Descendants.<br><br><strong>Example:</strong> //table[@class='dataTable']/tbody/tr[1]</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6" style="text-decoration:none"><h4>What is WebDriver?</h4></a></h4></div><div id="collapse6" class="panel-collapse collapse"><div class="panel-body">
+<p>WebDriver is a tool for automating web application testing, and in particular to verify that they work as expected. It aims to provide a friendly API that’s easy to explore and understand.</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse7" style="text-decoration:none"><h4>What are the different types of Drivers available in WebDriver?</h4></a></h4></div><div id="collapse7" class="panel-collapse collapse"><div class="panel-body">
+<p>The different drivers available in WebDriver are:</p><ul><li>FirefoxDriver</li><li>InternetExplorerDriver</li><li>ChromeDriver</li><li>SafariDriver</li><li>OperaDriver</li><li>AndroidDriver</li><li>IPhoneDriver</li><li>HtmlUnitDriver</li></ul></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse8" style="text-decoration:none"><h4>What is WebElement?</h4></a></h4></div><div id="collapse8" class="panel-collapse collapse"><div class="panel-body">
+<p>WebElement represents an HTML element. Generally, all operations on a web page will be performed through this WebElement.</p></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse9" style="text-decoration:none"><h4>How do you launch the browser using WebDriver?</h4></a></h4></div><div id="collapse9" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>The following syntax can be used to launch Browser:</strong><br><br>//Firefox<br>WebDriver driver = new FirefoxDriver();<br><br>//Chrome<br>WebDriver driver = new ChromeDriver();<br><br>//IE<br>WebDriver driver = new InternetExplorerDriver();</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse10" style="text-decoration:none"><h4>How do you open the Gmail in Firefox browser?</h4></a></h4></div><div id="collapse10" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>The Code is:</strong><br><pre class="prettyprint">WebDriver driver = new FirefoxDriver();<br>driver.get(http://www.gmail.com);</pre></p></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse11" style="text-decoration:none"><h4>How do you open a site using chrome browser?</h4></a></h4></div><div id="collapse11" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class ChromeBrowser{<br>&ensp;public static void main(String args[]){<br><br>&ensp; &ensp;//Set System property for chrome driver<br>&ensp; &ensp;System.setProperty("webdriver.chrome.driver", "D://Jars//chromedriver.exe");<br>&ensp; &ensp;WebDriver driver=new ChromeDriver(); <br>&ensp; &ensp;driver.get("http://www.google.com/"); <br>&ensp;}<br>}</pre></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse12" style="text-decoration:none"><h4>How do you open a site using IE browser?</h4></a></h4></div><div id="collapse12" class="panel-collapse collapse"><div class="panel-body">
+<p><pre class="prettyprint">public class IEBrowser{<br>&ensp;public static void main(String args[]){<br><br>&ensp;&ensp;//Set System property for IE driver<br>&ensp;&ensp;System.setProperty("webdriver.ie.driver", "d://Jars//IEDriverServer.exe");<br>&ensp;&ensp;WebDriver driver=new InternetExplorerDriver(); <br>&ensp;&ensp;driver.get("http://www.google.com/"); <br>&ensp;}<br>}</pre></p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse13" style="text-decoration:none"><h4>How can we get a text of a WebEelement?</h4></a></h4></div><div id="collapse13" class="panel-collapse collapse"><div class="panel-body">
+<p>getText() command is used to retrieve the inner text of the specified web element. The command doesn’t require any parameter but returns a string value.<br><br><strong>Sample Code:</strong><pre class="prettyprint">String strTxt = driver.findElement(By.id(“Text”)).getText();<br>System.out.println(strTxt);</pre></p></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse14" style="text-decoration:none"><h4>How do you maximize the browser?</h4></a></h4></div><div id="collapse14" class="panel-collapse collapse"><div class="panel-body">
+<p>To maximize a web browser, WebDriver providers a built-in method and here is the syntax:</p><pre class="prettyprint">WebDriver driver = new FirefoxDriver();<br>//to maximize the browser<br>driver.manage().window().maximize();</div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse15" style="text-decoration:none"><h4>Write a code to get the title of a page?</h4></a></h4></div><div id="collapse15" class="panel-collapse collapse"><div class="panel-body">
+<p>To get the title, we will use getTitle() method and here is the code:</p><pre class="prettyprint">WebDriver driver = new FirefoxDriver(); <br>driver.get("http://wwww.google.com");<br>//to get the title<br>String strTitle = driver.getTitle();<br>//to print the title<br>System.out.println(strTitle);</div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse16" style="text-decoration:none"><h4>Write a code to enter and clear value in a text box?</h4></a></h4></div><div id="collapse16" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>Entering values in Text Box:<br><br>sendKeys()</strong> method is used to enter the value into the text boxes.<br><pre class="prettyprint">
+driver.findElement(By.name("txtboxname")).sendKeys("Test");</pre><br><strong>Clearing  Values in Text Box:<br><br>clear()</strong> method is used to clear the text box.<br><br><pre class="prettyprint">driver.findElement(By.name("txtboxname ")).clear();</pre></p></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse17" style="text-decoration:none"><h4>Write a code to read the text box value?</h4></a></h4></div><div id="collapse17" class="panel-collapse collapse"><div class="panel-body">
+<p>By using, <strong>getAttribute()</strong> method we can get the value of the text box.<br><pre class="prettyprint">String strText = driver.findElement(By.name("txtboxname")).getAttribute("value");<br>//to print the text<br>System.out.println(strText);<br></p></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse18" style="text-decoration:none"><h4>How do you get the typed text in a textbox?</h4></a></h4></div><div id="collapse18" class="panel-collapse collapse"><div class="panel-body">
+<p>Use <strong>getAttribute()</strong> method to get the value of a typed text in the textbox and pass “value” as an argument. <br><pre class="prettyprint">String strText = driver.findElement(By.xpath("Xpath")).getAttribute("value");<br>System.out.println(strText);</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse19" style="text-decoration:none"><h4>How can you find if an element in displayed on the screen?</h4></a></h4></div><div id="collapse19" class="panel-collapse collapse"><div class="panel-body">
+<p>The visibility of the WebElements can find using the following methods:<br><ol><li>isDisplayed()</li><li>isSelected()</li><li>isEnabled()</li></ol><br><strong>Sample Code: </strong><br><br><strong>isDisplayed():</strong><br><br><pre class="prettyprint">boolean btnPresence = driver.findElement(By.id(“test”)).isDisplayed();</pre><br><strong>isSelected():</strong><br><br><pre class="prettyprint">boolean btnSelected = driver.findElement(By.id(“test”)).isDisplayed();</pre><br><strong>isEnabled():</strong><br><br><pre class="prettyprint">boolean btnEnabled = driver.findElement(By.id(“test”)).isEnabled();</pre></p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse20" style="text-decoration:none"><h4>How do you handle radio buttons?</h4></a></h4></div><div id="collapse20" class="panel-collapse collapse"><div class="panel-body">
+<p><pre class="prettyprint">WebDriver driver = new FirefoxDriver();<br>driver.get("http://www.xyz.com");<br><br>//radio button can find by using name attribute<br>List<WebElement> element = driver.findElements(By.name("sex"));<br><br>//by using size() method, get the count of radio buttons<br>int btnCount = element.size();<br>System.out.println(btnCount);<br><br>//to click the radio button<br>driver.findElement(By.id("u_0_e")).click();<br><br>//check whether the button is selected or not<br>// returns true if selected else false<br>boolean btn1 = driver.findElement(By.id("u_0_e")).isSelected();<br>System.out.println(btn1);</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse21" style="text-decoration:none"><h4>How do you handle dropdowns?</h4></a></h4></div><div id="collapse21" class="panel-collapse collapse"><div class="panel-body">
+<p><pre class="prettyprint">WebDriver driver=new FirefoxDriver();<br>driver.get("http://www.facebook.com");<br>driver.manage().window().maximize();<br><br>//name attribute to select dropdown<br>WebElement element=driver.findElement(By.name("birthday_month"));<br><br>List<WebElement> lists=element.findElements(By.tagName("option"));<br><br>for(WebElement dd_names : lists){<br>&ensp;String strName=dd_names.getText();<br>&ensp;System.out.println(strName);<br>}<br><br>Thread.sleep(3000);<br><br>//to select any value in dropdown<br>//method 1 - select by index<br>WebElement ele=driver.findElement(By.name("birthday_month"));<br>Select se=new Select(ele);<br>se.selectByIndex(8);<br><br>//method 2 - selectByVisibleText<br>se.selectByVisibleText("Feb");</pre></p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse22" style="text-decoration:none"><h4>How do you verify if the checkbox or radio is selected or not?</h4></a></h4></div><div id="collapse22" class="panel-collapse collapse"><div class="panel-body">
+<p>By Using isSelected() method, we can identify whether  it is selected or not. The return type of the method is Boolean. So if it returns ”True”  then button is selected else it is not selected.</p><pre class="prettyprint">Boolean b = driver.findElement(By.xpath("Xpath")).isSelected();<br>System.out.println(b);</div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse23" style="text-decoration:none"><h4>Write a code to clear the contents of a textbox?</h4></a></h4></div><div id="collapse23" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">driver.findElement(By.xpath("xpath of the textbox")).clear();</pre></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse24" style="text-decoration:none"><h4>How do you get Width & Height of a text box?</h4></a></h4></div><div id="collapse24" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class Width_Height{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;driver.get("http://wwww.google.com");<br>&ensp;&ensp;WebElement element=driver.findElement(By.xpath("xpath of a textbox"));<br><br>&ensp;&ensp;int wdth=element.getSize().getWidth();<br>&ensp;&ensp;int ht=element.getSize().getHeight();<br><br>&ensp;&ensp;System.out.println(wdth);<br>&ensp;&ensp;System.out.println(ht);<br>&ensp;}<br>}</pre></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse25" style="text-decoration:none"><h4>How to check all checkboxes in a page?</h4></a></h4></div><div id="collapse25" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class Check_all_checkbox{<br><br>&ensp;public static void main(String[] args){<br>&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;driver.get("http://www.echoecho.com/htmlforms09.htm");<br><br>&ensp;List<WebElement> allchkBox=driver.findElements(By.xpath("//input[@type='checkbox']"));<br><br>&ensp;&ensp;for(int i=0; i < allchkBox.size(); i++){<br><br>&ensp;&ensp;&ensp;allchkBox.get(i).click();<br>&ensp;&ensp;}<br>&ensp;}<br>}</pre></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse26" style="text-decoration:none"><h4>What is the use of deSelectAll() method?</h4></a></h4></div><div id="collapse26" class="panel-collapse collapse"><div class="panel-body">
+<p>It is used to deselect all the web elements which have been selected earlier.</p><pre class="prettyprint">listbox.deselectAll();</pre></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse27" style="text-decoration:none"><h4>What is the use of getOptions() method?</h4></a></h4></div><div id="collapse27" class="panel-collapse collapse"><div class="panel-body">
+<p>getOptions() is used to get the selected options from the dropdown list.</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse28" style="text-decoration:none"><h4>What is the difference between findElement() and findElements()?</h4></a></h4></div><div id="collapse28" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>findElement( ):</strong><ol><li>Find the first element within the current page using the locators.</li><li>Returns a single WebElement.</li><li>If element not found it will throw exception NoSuchElementException.</li></ol><br></p><p><strong>findElements( ):</strong><ol><li>Find all elements within the current page using the locators.</li><li>Returns List of WebElements. </li><li>If element not found it will return empty List of WebElement object.</li></ol></p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse29" style="text-decoration:none"><h4>What is the difference between driver.close() and driver.quit()?</h4></a></h4></div><div id="collapse29" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>close():</strong> close() method closes the web browser window that the user is currently working on.<br><br><strong>quit():</strong> whereas quit() method closes down all the windows that the program has opened.</p></div></div></div>
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse30" style="text-decoration:none"><h4>How to capture screenshot in WebDriver?</h4></a></h4></div><div id="collapse30" class="panel-collapse collapse"><div class="panel-body">
+<p>The sample code to take screenshot of webpage is:</p><pre class="prettyprint">File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);<br>FileUtils.copyFile(scrFile, new File("D:\\Test.jpg"));</pre></div></div></div>
+
+
+   <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse31" style="text-decoration:none"><h4>How to capture screenshot in WebDriver for a failed case?</h4></a></h4></div><div id="collapse31" class="panel-collapse collapse"><div class="panel-body">
+<p>To get screenshot on test failure, we should put the entire code in try-catch block. In the catch block make sure to copy the above screenshot code.</p><pre class="prettyprint">public class TakeScreenshot{<br><br>&ensp;WebDriver driver; <br><br>&ensp;@BeforeTest <br>&ensp;public void start(){<br>&ensp;&ensp;driver=new FirefoxDriver(); <br>&ensp;}<br><br>&ensp;@Test <br>&ensp;public void Test() throws IOException{<br>&ensp;try{<br>&ensp;&ensp;driver.get("https://google.com/"); <br>&ensp;&ensp;//find the element with wrong xpath, so control moves to catch block<br>&ensp;&ensp;driver.findElement(By.xpath("Wrong Xpath")).sendKeys("Testing"); <br><br>&ensp;}catch(Exception e){<br>&ensp;&ensp;//Takes the Screenshot and saves in the path mentioned when test fails <br>&ensp;&ensp;File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); <br>&ensp;&ensp;FileUtils.copyFile(scrFile, new File("D:\\Test.png")); <br><br>&ensp;&ensp;}<br>&ensp;}<br>}</pre></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse32" style="text-decoration:none"><h4>How to refresh a web page using WebDriver?</h4></a></h4></div><div id="collapse32" class="panel-collapse collapse"><div class="panel-body">
+<p>The following are the various methods available in WebDriver to refresh the page:</p><strong>1.	Using  refresh() method:</strong><br><br><pre class="prettyprint">driver.get("https://google.com/");<br>driver.navigate().refresh();</pre><strong>2.	Using to() method:</strong><br><br><pre class="prettyprint">driver.get("https://google.com/");<br>driver.navigate().to(driver.getCurrentUrl());</pre><strong>3.	Using get() method:</strong><br><br><pre class="prettyprint">driver.get("https://google.com/");<br>driver.get(driver.getCurrentUrl());</pre><strong>4.	Using SendKeys method:</strong><br><br><pre class="prettyprint">driver.get("https://google.com/");<br>driver.findElement(By.xpath("xpath")).sendKeys(Keys.F5);</div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse33" style="text-decoration:none"><h4>How do you navigate browser back and forward?</h4></a></h4></div><div id="collapse33" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">//Navigate - Forward<br>driver.navigate().forward();<br><br>//Navigate - Back<br>driver.navigate().back();</pre></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse34" style="text-decoration:none"><h4>How do you handle alert pop-up?</h4></a></h4></div><div id="collapse34" class="panel-collapse collapse"><div class="panel-body">
+<p>By using “Alert” class you can handle pop-up’s. First move control to alert pop-up’s, then move back control to main window.<br><br><strong>The Sample code is:</strong></p>
+<pre class="prettyprint">WebDriver driver=new FirefoxDriver();<br>driver.get("http://xyz.com");<br><br>//Move control to alert pop up<br>Alert alt=driver.switchTo().alert();<br>//to click "Ok"<br>alt.accept();<br>//Or<br>//to click "Cancel"<br>alt.dismiss();<br><br>//Then move control back to main window<br>driver.switchTo().window("main window");</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse35" style="text-decoration:none"><h4>How to perform right click using WebDriver?</h4></a></h4></div><div id="collapse35" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>Method 1: Using Actions class</strong></p><pre class="prettyprint">// the element on which the right click to be performed<br>WebElement element=driver.findElement(By.xpath("//a[@href='username']"));<br>Actions oAction=new Actions(driver);<br>oAction.moveToElement(Webelement);<br>//this will perform right click<br>oAction.contextClick(Webelement).build().perform();</pre><p><strong>Method 2: Using  ContextClick()</strong></p><pre class="prettyprint">WebElement element=driver.findElement(By.xpath("//a[@href='username']"));<br>// Initialize Actions class object<br>Actions builder=new Actions(driver);<br>//ContextClick() is a method to right click <br>builder.contextClick(element).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse36" style="text-decoration:none"><h4>How do you perform drag and drop using WebDriver?</h4></a></h4></div><div id="collapse36" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>Method 1:</strong></p><pre class="prettyprint">Actions act=new Actions(driver);<br>WebElement source=driver.findElement(By.xpath("source xpath"));<br>WebElement target=driver.findElement(By.xpath("target xpath"));<br>act.dragAndDrop(source, target).perform();</pre><p><strong>Method 2:</strong></p><pre class="prettyprint">act.clickAndHold(source).build().perform();<br>act.moveToElement(target).build().perform();<br>act.release(target).build().perform();</pre><p><strong>Method 3:</strong></p><pre class="prettyprint">act.dragAndDropBy(source, xoffset, yoffset).perform();</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse37" style="text-decoration:none"><h4>Write a code to upload a file?</h4></a></h4></div><div id="collapse37" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">//Syntax - sendKeys(“file to be uploaded”);<br>driver.findElement(By.xpath("xpath")).sendKeys(“D:\\test.txt”);</pre></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse38" style="text-decoration:none"><h4>How to switch between windows?</h4></a></h4></div><div id="collapse38" class="panel-collapse collapse"><div class="panel-body">
+<p><pre class="prettyprint">public class Window_Handles{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;driver.get("http://www.rediff.com");<br><br>&ensp;&ensp;Set<String> st=driver.getWindowHandles();<br><br>&ensp;&ensp;Iterator<String> it=st.iterator();<br>&ensp;&ensp;String mainWindow=it.next();<br>&ensp;&ensp;String popUp=it.next();<br><br>&ensp;&ensp;//close the pop-up<br>&ensp;&ensp;driver.switchTo().window(popUp).close();<br>&ensp;&ensp;//move control back to main window<br>&ensp;&ensp;driver.switchTo().window(mainWindow);<br>&ensp;}<br>}</pre></p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse39" style="text-decoration:none"><h4>What is the difference between getWindowHandles() and getWindowHandle( )?</h4></a></h4></div><div id="collapse39" class="panel-collapse collapse"><div class="panel-body"><p><strong>getWindowHandles() -</strong> is used to get the address of all the open browser and its return type is Iterator<String>.<br><br><strong>getWindowHandle() -</strong> is used to get the address of the current browser where the control is and return type is String.</p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse40" style="text-decoration:none"><h4>What is the difference between driver.get() and driver.navigate() methods?</h4></a></h4></div><div id="collapse40" class="panel-collapse collapse"><div class="panel-body"><p><strong>driver.get():</strong><ol><li>driver.get() method is generally used to open the url.</li><li>It will till the whole page gets loaded.</li></ol></p><p><strong>driver.navigate():</strong><ol><li>driver.navigate() method is generally used to navigate to url.</li><li>It supports back, forward, and page refresh.</li><li>It will just navigate to the page but will not wait till the whole page gets loaded.</li></ol></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse41" style="text-decoration:none"><h4>How do you handle iframes in selenium?</h4></a></h4></div><div id="collapse41" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class iframes{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;driver.get("http://www.rediff.com");<br><br>&ensp;&ensp;//Find no of iframes in a page<br>&ensp;&ensp;List<WebElement> iframeCount=driver.findElements(By.tagName("iframe"));<br>&ensp;&ensp;System.out.println("The total number of iframes are: " + iframeCount.size());<br><br>&ensp;&ensp;//Method 1 - Switch to Frames by Index<br>&ensp;&ensp;//Index of iFrame starts from 0.<br>&ensp;&ensp;//Pass the frame number as parameter<br>&ensp;&ensp;driver.switchTo().frame(0);<br><br>&ensp;&ensp;//Method 2 - Switch to Frames by Name<br>&ensp;&ensp;//Pass the frame name (String) as parameter<br>&ensp;&ensp;driver.switchTo().frame("iframe2");<br><br>&ensp;&ensp;//Method 3 - Switch to Frame by ID<br>&ensp;&ensp;//Pass the ID as parameter<br>&ensp;&ensp;driver.switchTo().frame("ID3");<br><br>&ensp;&ensp;//Method 4 - Switch to Frame by WebElement<br>&ensp;&ensp;//Pass web element as parameter<br>&ensp;&ensp;driver.switchTo().frame(element4);<br><br>&ensp;&ensp;//Switch control back to main window<br>&ensp;&ensp;driver.switchTo().defaultContent();<br><br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse42" style="text-decoration:none"><h4>How do you simulate scroll down action?</h4></a></h4></div><div id="collapse42" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class Scroll_Down{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;driver.get("http://www.facebook.com");<br>&ensp;&ensp;driver.manage().window().maximize();<br><br>&ensp;&ensp;//Method 1 - Using JavaScript to scroll down<br>&ensp;&ensp;//Scroll Down<br>&ensp;&ensp;JavascriptExecutor js=(JavascriptExecutor)driver;<br>&ensp;&ensp;js.executeScript("window.scrollBy(0,2000)", "");<br><br>&ensp;&ensp;//Scroll Up<br>&ensp;&ensp;js.executeScript("window.scrollBy(2000,0)", "");<br><br>&ensp;&ensp;//Method 2 - Using sendKeys<br>&ensp;&ensp;driver.findElement(By.xpath("xpath")).sendKeys(Keys.PAGE_DOWN);<br><br>&ensp;&ensp;//Method 3 - Scroll to specific element<br>&ensp;&ensp;WebElement element=driver.findElement(By.xpath("xpath"));<br>&ensp;&ensp;Coordinates co=((Locatable)element).getCoordinates();<br>&ensp;&ensp;co.inViewPort();<br><br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse43" style="text-decoration:none"><h4>How to get colour of a text?</h4></a></h4></div><div id="collapse43" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">String clr = driver.findElement(By.xpath("//a[text()='facebook']")).getCssValue("color");<br>System.out.println(clr);</pre></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse44" style="text-decoration:none"><h4>How to hover the mouse on an element?</h4></a></h4></div><div id="collapse44" class="panel-collapse collapse"><div class="panel-body">
+<p>By using Actions class, you can move cursor to a particular element.</p><pre class="prettyprint">WebElement element=driver.findElement(By.xpath("xpath of a element"));<br>Actions act=new Actions(driver);<br>//hover<br>act.moveToElement(element);</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse45" style="text-decoration:none"><h4>Write a code to handle https website error in selenium?</h4></a></h4></div><div id="collapse45" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">//Create ff profile<br>FirefoxProfile fp=new FirefoxProfile();<br>fp.setAcceptUntrustedCertificates(true);<br>fp.setAssumeUntrustedCertificateIssuer(false);<br><br>//pass ff profile as constructor<br>WebDriver driver=new FirefoxDriver(fp);<br>driver.get("https://www.xyz.com");</pre></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse46" style="text-decoration:none"><h4>Write a code to login into any site showing any authentication popup for username and password?</h4></a></h4></div><div id="collapse46" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">//Pass Username and Password in URL itself<br>driver.get("http://username:password@www.xyz.com");</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse47" style="text-decoration:none"><h4>How do you send ENTER Key?</h4></a></h4></div><div id="collapse47" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">WebDriver driver=new FirefoxDriver();<br>driver.get("https://www.xyz.com");<br><br>//Enter Key<br>driver.findElement(By.xpath("xpath")).sendKeys(Keys.ENTER);<br><br>// Tab Key<br>driver.findElement(By.xpath("xpath")).sendKeys(Keys.TAB);</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse48" style="text-decoration:none"><h4>How to perform double click using WebDriver?</h4></a></h4></div><div id="collapse48" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">WebDriver driver=new FirefoxDriver();<br>driver.get("https://www.xyz.com");<br><br>//button to be double clicked<br>WebElement element=driver.findElement(By.xpath("xpath"));<br>Actions act=new Actions(driver);<br><br>//double click<br>act.doubleClick(element);</pre></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse49" style="text-decoration:none"><h4>How to press Shift+Tab?</h4></a></h4></div><div id="collapse49" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">String keys = Keys.chord(Keys.SHIFT, Keys.ENTER);<br>driver.findElement(By.xpath("xpath")).sendKeys(keys);</pre></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse50" style="text-decoration:none"><h4>Write a code to print the number of links in a page?</h4></a></h4></div><div id="collapse50" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class Link_Count{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;driver.get("http://www.google.com");<br><br>&ensp;&ensp;//find links by anchor tag<br>&ensp;&ensp;List<WebElement> element=driver.findElements(By.tagName("a"));<br>&ensp;&ensp;//print the number of links<br>&ensp;&ensp;System.out.println(element.size());<br><br>&ensp;}<br>}</pre></div></div></div>
+
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse51" style="text-decoration:none"><h4>How to find broken images in a page using Selenium WebDriver?</h4></a></h4></div><div id="collapse51" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class Broken_Images{<br><br>&ensp;public static void main(String[] args) throws IOException{<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;EventFiringWebDriver eventFiringWebDriver=new EventFiringWebDriver (driver);<br>&ensp;&ensp;driver.get("http://www.gmail.com");<br><br>&ensp;&ensp;// Storing all the image element in the variable allImages<br>&ensp;&ensp;List<WebElement> allImages=eventFiringWebDriver.findElements(By.tagName("img"));<br>&ensp;&ensp;int countBrokenImages=0;<br><br>&ensp;&ensp;// Declaring a dynamic string of array which will store src of all the broken images<br>&ensp;&ensp;List<String> BrokenimageUrl=new ArrayList<String>();<br><br>&ensp;&ensp;String script="return (typeof arguments[0].naturalWidth!="undefined" &&arguments[0].naturalWidth>0)";<br><br>&ensp;&ensp;for (WebElement image : allImages){<br>&ensp;&ensp;&ensp;Object imgStatus=eventFiringWebDriver.executeScript(script, image); <br>&ensp;&ensp;if(imgStatus.equals(false)){<br>&ensp;&ensp;&ensp;String currentImageUrl=image.getAttribute("src");<br>&ensp;&ensp;&ensp;String imageUrl=currentImageUrl ;<br>&ensp;&ensp;&ensp;BrokenimageUrl.add(imageUrl);<br>&ensp;&ensp;&ensp;countBrokenImages++;<br>&ensp;&ensp;&ensp;}<br>&ensp;&ensp;}<br><br>&ensp;&ensp;// Printing the src of the broken images if any<br>&ensp;&ensp;System.out.println("Number of broken images found in the page : " +countBrokenImages);<br>&ensp;&ensp;for (String z : BrokenimageUrl){<br>&ensp;&ensp;&ensp;System.out.println(z);<br>&ensp;&ensp;}<br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse52" style="text-decoration:none"><h4>How to disable cookies in browser?</h4></a></h4></div><div id="collapse52" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class Disable_Cookies{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;//disable cookies in firefox<br>&ensp;&ensp;//create firefox profile <br>&ensp;&ensp;FirefoxProfile fp=new FirefoxProfile();<br>&ensp;&ensp;//disable cookies<br>&ensp;&ensp;fp.setPreference("network.cookie.cookieBehavior", 2);<br>&ensp;&ensp;WebDriver driver=new FirefoxDriver(fp);<br>&ensp;&ensp;driver.get("http://www.google.com");<br><br>&ensp;&ensp;//disable cookies in chrome<br>&ensp;&ensp;ChromeOptions options=new ChromeOptions(); <br>&ensp;&ensp;Map prefs=new HashMap(); <br>&ensp;&ensp;prefs.put("profile.default_content_settings.cookies", 2); <br>&ensp;&ensp;options.setExperimentalOption("prefs", prefs); driver=new ChromeDriver(options); <br><br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse53" style="text-decoration:none"><h4>How to handle dynamically changing xPaths?</h4></a></h4></div><div id="collapse53" class="panel-collapse collapse"><div class="panel-body">
+<p>You can handle dynamically changing xPaths by following ways:<br><strong>1.	Use starts with function</strong><pre class="prettyprint">//div[starts-with(@id,'post-body-')]/div[1]/form[1]/input[1]</pre></p><br><p><strong>2.	Use contains function</strong><br><pre class="prettyprint">//div[contains(@id,'post-body-')]/div[1]/form[1]/input[1]</pre></p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse54" style="text-decoration:none"><h4>Write a code to set browser width and height?</h4></a></h4></div><div id="collapse54" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class Browser_Height{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br><br>&ensp;&ensp;//set browser height=500 and width=500<br>&ensp;&ensp;Dimension d=new Dimension(500, 500);<br>&ensp;&ensp;driver.manage().window().setSize(d);<br><br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse55" style="text-decoration:none"><h4>How do you load data from Properties files?</h4></a></h4></div><div id="collapse55" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class Prop_File{<br><br>&ensp;@Test<br>&ensp;public void propfile() throws IOException{<br><br>&ensp;&ensp;//create the properties object<br>&ensp;&ensp;Properties prop=new Properties();<br>&ensp;&ensp;FileInputStream fp=new FileInputStream("D:\\config.properties");<br><br>&ensp;&ensp;//load the file<br>&ensp;&ensp;prop.load(fp);<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;//load url from the properties file<br>&ensp;&ensp;driver.get(prop.getProperty("URL"));<br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse56" style="text-decoration:none"><h4>How do you create a text file?</h4></a></h4></div><div id="collapse56" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class Text_File{<br><br>&ensp;@Test<br>&ensp;public void propfile() throws IOException{<br><br>&ensp;&ensp;//create file object<br>&ensp;&ensp;File f=new File("D:\\temp.txt");<br><br>&ensp;&ensp;//create new file in D:<br>&ensp;&ensp;f.createNewFile();<br><br>&ensp;&ensp;//to write into the text file, create file-writer object<br>&ensp;&ensp;FileWriter w=new FileWriter("D:\\temp.txt");<br>&ensp;&ensp;BufferedWriter out=new BufferedWriter(w);<br>&ensp;&ensp;out.write("hello world");<br>&ensp;&ensp;out.newLine();<br>&ensp;&ensp;out.write("hello world again");<br>&ensp;&ensp;out.flush();<br><br>&ensp;&ensp;//to read the text file create file-reader object<br>&ensp;&ensp;FileReader r=new FileReader("D:\\temp.txt");<br>&ensp;&ensp;BufferedReader br=new BufferedReader(r);<br><br>&ensp;&ensp;String x="";<br><br>&ensp;&ensp;while((x=br.readLine())!=null){<br>&ensp;&ensp;&ensp;System.out.println(x); <br>&ensp;&ensp;}<br>&ensp;}<br>}</pre></div></div></div>
+
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse57" style="text-decoration:none"><h4>How do you download a file using selenium WebDriver?</h4></a></h4></div><div id="collapse57" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class FileDownload{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;FirefoxProfile fp=new FirefoxProfile();<br>&ensp;&ensp;//the browser will not ask for save location & mime type of the file to be downloaded - text file here <br>&ensp;&ensp;fp.setPreference("browser.helperApps.neverAsk.SaveToDisk", "text/plain");<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;driver.get("http://www.xyz.com");<br>&ensp;&ensp;//click download link & file will automatically saved into system<br>&ensp;&ensp;driver.findElement(By.xpath("xpath")).click();<br>&ensp;}<br>}</pre></div></div></div>
+
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse58" style="text-decoration:none"><h4>How will you click a sub menu?</h4></a></h4></div><div id="collapse58" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class SubMenu{<br><br>&ensp;public static void main(String[] args) throws InterruptedException{<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;WebElement mainmenu=driver.findElement(By.xpath("xpath of main menu"));<br>&ensp;&ensp;WebElement submenu=driver.findElement(By.xpath("xpath of sub menu"));<br>&ensp;&ensp;Actions act=new Actions(driver);<br><br>&ensp;&ensp;//Method 1<br>&ensp;&ensp;//move cursor to main menu<br>&ensp;&ensp;act.moveToElement(mainmenu).build().perform();<br>&ensp;&ensp;Thread.sleep(2000);<br>&ensp;&ensp;//click sub menu<br>&ensp;&ensp;submenu.click();<br><br>&ensp;&ensp;//Method 2<br>&ensp;&ensp;act.moveToElement(mainmenu).perform();<br>&ensp;&ensp;Thread.sleep(2000);<br>&ensp;&ensp;//click sub menu<br>&ensp;&ensp;act.click(submenu).perform();<br><br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse59" style="text-decoration:none"><h4>How do you connect db using WebDriver?</h4></a></h4></div><div id="collapse59" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class DB_Connection{<br><br>&ensp;public static void main(String[] args) throws ClassNotFoundException, SQLException{<br><br>&ensp;&ensp;//Connection URL<br>&ensp;&ensp;String dbUrl="jdbc:mysql://localhost:3306/userdb";<br><br>&ensp;&ensp;//DB username and password<br>&ensp;&ensp;String Username="root";<br>&ensp;&ensp;String Password="root";<br><br>&ensp;&ensp;//Query to be used<br>&ensp;&ensp;String query="select username from table_name;";<br><br>&ensp;&ensp;//Load my sql jdbc driver<br>&ensp;&ensp;Class.forName("com.mysql.jdbc.Driver");<br><br>&ensp;&ensp;//Connect DB<br>&ensp;&ensp;Connection con=DriverManager.getConnection(dbUrl,Username,Password);<br><br>&ensp;&ensp;//Create Statement Object<br>&ensp;&ensp;Statement st=con.createStatement();<br><br>&ensp;&ensp;//Send Query to DB<br>&ensp;&ensp;ResultSet rs=st.executeQuery(query);<br><br>&ensp;&ensp;//while loop to print the result<br>&ensp;&ensp;while(rs.next()){<br>&ensp;&ensp;&ensp;&ensp;String u_name=rs.getString(1);<br>&ensp;&ensp;&ensp;&ensp;//prints the username<br>&ensp;&ensp;&ensp;&ensp;System.out.println(u_name);<br>&ensp;&ensp;}<br><br>&ensp;&ensp;//close db connection<br>&ensp;&ensp;con.close();<br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse60" style="text-decoration:none"><h4>How do you get X and Y coordinates of a WebElement?</h4></a></h4></div><div id="collapse60" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">//Get the co-ordinates<br>Point p=driver.findElement(By.xpath("xpath of a webelement")).getLocation();<br>//Print the co-ordinates<br>System.out.println(p.x);<br>System.out.println(p.y);</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse61" style="text-decoration:none"><h4>How will you get data from WebTable?</h4></a></h4></div><div id="collapse61" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class WebTable{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;/***<br>&ensp;&ensp;consider a webtable of 4 rows and 3 columns<br>&ensp;&ensp;xPath to get all rows of a webtable - //table[@class='dataTable']/tbody/tr<br>&ensp;&ensp;xPath to get 1st row of a webtable - //table[@class='dataTable']/tbody/tr[1]<br>&ensp;&ensp;xPath to get all columns of a webtable - //table[@class='dataTable']/tbody/tr[4]/td<br>&ensp;&ensp;xPath to get 2nd column of a webtable - //table[@class='dataTable']/tbody/tr/td[2]<br>&ensp;&ensp;***/<br><br>&ensp;&ensp;//code to print 1st row<br>&ensp;&ensp;List<WebElement> rows=driver.findElements(By.xpath("//table[@class='dataTable']/tbody/tr[1]"));<br>&ensp;&ensp;//print row size<br>&ensp;&ensp;System.out.println("Rows Size "+rows.size());<br><br>&ensp;&ensp;//for loop to get the content of the row<br>&ensp;&ensp;for(int i=0; i < rows.size(); i++){<br>&ensp;&ensp;&ensp;&ensp;System.out.println(rows.get(i).getText());<br>&ensp;&ensp;}<br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse62" style="text-decoration:none"><h4>How do you handle cookies?</h4></a></h4></div><div id="collapse62" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class Cookies{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;driver.get("http://gmail.com");<br><br>&ensp;&ensp;Set<Cookie> cc=driver.manage().getCookies();<br>&ensp;&ensp;//print cookie size<br>&ensp;&ensp;System.out.println(cc.size());<br><br>&ensp;&ensp;Iterator<Cookie> it=cc.iterator();<br><br>&ensp;&ensp;while(it.hasNext()){<br>&ensp;&ensp;&ensp;Cookie c=it.next();<br><br>&ensp;&ensp;&ensp;//print the domain<br>&ensp;&ensp;&ensp;System.out.println(c.getDomain());<br>&ensp;&ensp;&ensp;//print the expire detail<br>&ensp;&ensp;&ensp;System.out.println(c.getExpiry());<br>&ensp;&ensp;&ensp;//print the cookie name<br>&ensp;&ensp;&ensp;System.out.println(c.getName());<br>&ensp;&ensp;}<br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse63" style="text-decoration:none"><h4>Write a code to delete all the cookies of a browser?</h4></a></h4></div><div id="collapse63" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">driver.manage().deleteAllCookies();</pre></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse64" style="text-decoration:none"><h4>How do you access the Firefox profiles in WebDriver?</h4></a></h4></div><div id="collapse64" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">public class FF_Profile{<br><br>&ensp;public static void main(String[] args){<br><br>&ensp;&ensp;//create object of profiles Ini class which holds all the profile of ff<br>&ensp;&ensp;ProfilesIni prof=new ProfilesIni();<br>&ensp;&ensp;//get the profile you want (from already existing one)<br>&ensp;&ensp;FirefoxProfile p=prof.getProfile("user1");<br><br>&ensp;&ensp;//pass the desired profile object as constructor<br>&ensp;&ensp;WebDriver driver=new FirefoxDriver(p);<br>&ensp;&ensp;//driver will open the url by using the user1 profile<br>&ensp;&ensp;driver.get("http://gmail.com");<br>&ensp;}<br>}</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse65" style="text-decoration:none"><h4>How to Zoom In and Zoom Out in WebDriver?</h4></a></h4></div><div id="collapse65" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">//To Zoom in<br>WebElement element=driver.findElement(By.tagName("html"));<br>element.sendKeys(Keys.chord(Keys.CONTROL, Keys.ADD));<br><br>//To Zoom out to normal page<br>element.sendKeys(Keys.chord(Keys.CONTROL, "0"));</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse66" style="text-decoration:none"><h4>What is the difference between xPath and DOM (Document Object Model)?</h4></a></h4></div><div id="collapse66" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>DOM: </strong><br>The Document Object Model (DOM) is a cross-platform and language-independent convention for representing and interacting with objects in HTML, XHTML and XML documents. Objects in the DOM tree may be addressed and manipulated by using methods on the objects.<br><br><strong>Example:</strong><pre class="prettyprint"> var element = document.getElementById("intro");</pre><p><strong>XPATH:</strong><br>xPath, the XML Path Language, is a query language for selecting nodes from an XML document. In addition, xPath may be used to compute values (e.g., strings, numbers, or Boolean values) from the content of an XML document.<br><br><strong>Example:</strong><pre class="prettyprint"> //input[@id=”txtbox”]</pre></p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse67" style="text-decoration:none"><h4>What is HTML UnitDriver?</h4></a></h4></div><div id="collapse67" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>HtmlUnit Driver</strong><br><br>This is currently the fastest and most lightweight implementation of WebDriver. As the name suggests, this is based on HtmlUnit.<br><br><strong>Pros</strong><ul><li>Fastest implementation of WebDriver</li><li>A pure Java solution and so it is platform independent.</li><li>Supports Javascript</li></ul></p><p><strong>Cons</strong><ul><li>Emulates other browser's JS behaviour.</li></ul></p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse68" style="text-decoration:none"><h4>How do you enable JavaScript in HTML UnitDriver?</h4></a></h4></div><div id="collapse68" class="panel-collapse collapse"><div class="panel-body">
+<pre class="prettyprint">HtmlUnitDriver driver = new HtmlUnitDriver();<br>driver.setJavascriptEnabled(true);</pre><p><strong>Or</strong><pre class="prettyprint">HtmlUnitDriver driver = new HtmlUnitDriver(true);</pre></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse69" style="text-decoration:none"><h4>What is Thread.Sleep()?</h4></a></h4></div><div id="collapse69" class="panel-collapse collapse"><div class="panel-body">
+<p>The <strong>Thread.Sleep()</strong> method causes the currently executing thread to sleep for the specified number of milliseconds.</p></div></div></div>
+
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse70" style="text-decoration:none"><h4>How to retrieve css properties of an element?</h4></a></h4></div><div id="collapse70" class="panel-collapse collapse"><div class="panel-body">
+<p>The values of the css properties can be retrieved using a getCssValue () method.<br><br><strong>Syntax:</strong><pre class="prettyprint">driver.findElement(By.id(“id“)).getCssValue(“name of css attribute”);<br>driver.findElement(By.id(“id“)).getCssValue(“font-size”);</pre></p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse71" style="text-decoration:none"><h4>What is the difference between POI and JXL?</h4></a></h4></div><div id="collapse71" class="panel-collapse collapse"><div class="panel-body">
+<p>
+
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+<table class="tftable" border="1">
+<tr><th>S.No</th><th>JXL</th><th>POI API</th></tr>
+<tr><td>1</td><td>JXL supports only “.xls” format. (Excel 2003)</td><td>POI jar supports all excel formats</td></tr>
+<tr><td>2</td><td>JXL API doesn’t support rich text formatting</td><td>POI API supports rich text formatting</td></tr>
+<tr><td>3</td><td>JXL API is faster than POI API</td><td>POI API is slower than JXL API</td></tr>
+</table></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse72" style="text-decoration:none"><h4>What is the difference between Assert and Verify?</h4></a></h4></div><div id="collapse72" class="panel-collapse collapse"><div class="panel-body">
+<p>Verify command will not stop execution of test case if verification fails. It will log an error and proceed with execution of rest of the test case.<br><br>Assert command will stop execution of test case if verification fails. It will log an error and will not proceed with execution of rest of the test case. We use assertions in scenarios where there is no point proceeding further if expected output is not matched.<br><br>Use assertions when you want to stop execution of a test case if expected output is not matched and use verification when you still want to proceed execution of a test case if expected output is not matched.</p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse73" style="text-decoration:none"><h4>Give the example for method overloading in WebDriver?</h4></a></h4></div><div id="collapse73" class="panel-collapse collapse"><div class="panel-body">
+<p>frame(string), frame(int), frame(WebElement).</p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse74" style="text-decoration:none"><h4>What are the different types of exception we get in WebDriver?</h4></a></h4></div><div id="collapse74" class="panel-collapse collapse"><div class="panel-body">
+<p><style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+<table class="tftable" border="1">
+<tr><th>Exception</th><th>Description</th></tr>
+<tr><td>ElementNotVisibleException</td><td>Element is present but not visible and can not be interacted with.</td></tr>
+<tr><td>NoSuchElementException</td><td>Element not present in DOM. Thrown by findElement(By by) & findElements(By by).</td></tr>
+<tr><td>StaleElementReferenceException</td><td>The reference to the element is now stale. It is no longer appears on the DOM of the page.</td></tr>
+<tr><td>TimeoutException</td><td>Exception thrown when a comand does not complete in enough time.</td></tr>
+<tr><td>InvalidCoordinatesException</td><td>The co-ordinates provided to the interactions operation are not valid.</td></tr>
+<tr><td>MoveTargetOutOfBoundsException</td><td>The target provided to the action move() method is invalid - outside of the size of the window.</td></tr>
+<tr><td>NoAlertPresentException</td><td>When user tries to access alert when it is not present.</td></tr>
+<tr><td>NoSuchFrameException</td><td>Exception thrown when accessing the frame which is not present. (WebDriver.SwitchTo().frame())</td></tr>
+<tr><td>NoSuchSessionException</td><td>Thrown by any command being called after WebDriver.quit().</td></tr>
+<tr><td>NoSuchWindowException</td><td>Thrown when accessing the window which is not present (Thrown by WebDriver.SwitchTo().window()).</td></tr>
+<tr><td>NoSuchContextException</td><td>Thrown by WebDriver.SwitchTo().context().</td></tr>
+<tr><td>InvalidCookieDomainException</td><td>Thrown when attempting to add a cookie under a different domain than the current url.</td></tr>
+<tr><td>UnableToSetCookieException</td><td>Thrown when a driver fails to set cookie.</td></tr>
+<tr><td>UnhandledAlertException</td><td>Alert is present due to which the operation cannot be performed.</td></tr>
+<tr><td>UnreachableBrowserException</td><td>Problem with connection to browser due to closing of browser, invalid remote server address.</td></tr>
+<tr><td>ConnectionClosedException</td><td>Exception thrown when the connection to the SafariDriver is lost.</td></tr>
+<tr><td>UnsupportedCommandException</td><td>Used to indicate that a command used by the remote webdriver is unsupported.</td></tr>
+</table></p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse75" style="text-decoration:none"><h4>What are the different types Waits in WebDriver?</h4></a></h4></div><div id="collapse75" class="panel-collapse collapse"><div class="panel-body">
+<p>Waiting provides some time interval between actions performed; mostly locating an element or any other operations to be performed on the element.<br><br><strong>Implicit Wait: </strong><br><br>Implicit wait tells Selenium instance to wait for specified amount of time before throwing an exception. If WebDriver cannot find an element, it will wait for specified amount of time. During this time, no attempt is made to find the element. After completion of specified time, WebDriver will try to find the element. If the element is not found then we get an exception. <br><br><strong>Implicit wait can be implemented by using the code below:</strong><pre class="prettyprint">driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);</pre></p><br><p><strong>Explicit Wait:</strong><br><br>You can define to wait for a certain condition to occur before proceeding further test code execution.<br><br><strong>Explicit wait can be implemented by using the code below:</strong><br><pre class="prettyprint">WebDriverWait wait = new WebDriverWait(driver, 20);<br>wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='gbqfq']")));</pre></p><p><strong>Fluent Wait:</strong><br><br>Each FluentWait instance defines the maximum amount of time to wait for a condition, as well as the frequency with which to check the condition. And you can ignore specific types of exceptions whilst waiting, such as NoSuchElement Exceptions when searching for an element on the page.<br><br><strong>Fluent wait can be implemented by using the code below:</strong><br><pre class="prettyprint">Wait wait = new FluentWait(driver)<br>&ensp;&ensp;.withTimeout(30, SECONDS)<br>&ensp;&ensp;.pollingEvery(5, SECONDS)<br>&ensp;&ensp;.ignoring(NoSuchElementException.class);</pre></p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse76" style="text-decoration:none"><h4>What is actions class in WebDriver?</h4></a></h4></div><div id="collapse76" class="panel-collapse collapse"><div class="panel-body">
+<p>Actions class is used to control the actions of mouse and complex  user gestures.</p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse77" style="text-decoration:none"><h4>What are desired capabilities?</h4></a></h4></div><div id="collapse77" class="panel-collapse collapse"><div class="panel-body">
+<p>Desired Capabilities help to set properties for the WebDriver. A typical use case would be to set the path for the Firefox Driver if your local installation doesn’t correspond to the default settings.</p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse78" style="text-decoration:none"><h4>Write the scenarios which cannot be automated using WebDriver?</h4></a></h4></div><div id="collapse78" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>Few scenarios cannot be automated using WebDriver. They are:</strong><ol><li>Captcha</li><li>Barcode Reader</li><li>Bitmap Comparison</li></ol></p></div></div></div>
+
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse79" style="text-decoration:none"><h4>Explain how can you use recovery scenario with Selenium?</h4></a></h4></div><div id="collapse79" class="panel-collapse collapse"><div class="panel-body">
+<p>You can use recovery scenario depends upon the programming language you use.  If you are using Java then you can use exception handling.  By using “Try Catch Block” within your Selenium WebDriver Java tests, you can handle exceptions.</p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse80" style="text-decoration:none"><h4>How can you create html test report?</h4></a></h4></div><div id="collapse80" class="panel-collapse collapse"><div class="panel-body">
+<p>To create html test report there are three ways:<br><ul><li>TestNG:  Using inbuilt default.html to get the HTML report. Also XLST reports from ANT, Selenium, TestNG combination</li><li>JUnit: With the help of ANT</li><li>Using our own customized reports by using XSL jar for converting XML content to HTML</li></ul></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse81" style="text-decoration:none"><h4>What is EventFiringWebDriver?</h4></a></h4></div><div id="collapse81" class="panel-collapse collapse"><div class="panel-body">
+<p>To create html test report there are three ways:<br><ol><li>WebDriverEventListener:  It’s an interface containing all unimplemented methods related to different events of WebDriver.</li><br><li>AbstractWebDriverEventListener:  It’s an abstract class which implements WebDriverEventListener interface and provides empty implementation of all the methods defined in interface. </li><br><li>EventFiringWebDriver: It’s a class which implements WebDriver interface.<br><br>It has two important methods:<br><br>a. Register (WebDriverEventListener eventListener) : The method is used to bind our WebDriver instance with custom WebDriverEventListener class to handle different events. <br>
+b. Unregister (WebDriverEventListener eventListener) : The method is used to isolate the WebDriver instance from WebDriverEventListener class
+</li></ol></li></ul></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse82" style="text-decoration:none"><h4>What is TestNG listener and How to implement in Selenium?</h4></a></h4></div><div id="collapse82" class="panel-collapse collapse"><div class="panel-body">
+<p>In TestNG we can generate logs with the help of Listeners. Listeners implement the interface "org.testng.ITestListener". There are methods which gives you real time information.<br><br>You can either extend 'TestListenerAdapter' or implement Interface 'ITestListener' which is a listener for test running.<br><br>By using TestNG listeners 'ITestListener' or 'TestListenerAdapter' we can change the default behaviour write our own implementation when a Test fails or Skips etc.
+</p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse83" style="text-decoration:none"><h4>What is difference between WebDriver listener and TestNg listener?</h4></a></h4></div><div id="collapse83" class="panel-collapse collapse"><div class="panel-body">
+<p>TestNG Listeners are triggered at test level such as before starting the test, after the test or when test fails etc; <br><br>Whereas WebDriver Listener are triggered at component level such as before click, after click etc.</p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse84" style="text-decoration:none"><h4>How to set system proeprty for FireFox driver if WebDriver unable to find? or If FireFox is not installed in the default drive or How to solve FireFox driver issue for Windows 64 bit machine?</h4></a></h4></div><div id="collapse84" class="panel-collapse collapse"><div class="panel-body">
+<p>The solution to the above problem is to specify the location of FireFox in your script.<br>Here is a sample code:<br><br>
+<pre class="prettyprint">System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");<br>WebDriver driver=new FirefoxDriver();<br>driver.get(https://gmail.com);</pre></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse85" style="text-decoration:none"><h4>How to Zip a folder using WebDriver?</h4></a></h4></div><div id="collapse85" class="panel-collapse collapse"><div class="panel-body">
+<p><pre class="prettyprint">import java.io.File;<br>import java.io.IOException;<br>import org.openqa.selenium.io.Zip;<br><br>public class Zip_File {<br><br>&ensp;public static void main(String[] args) {<br><br>&ensp;&ensp;Zip zipFolder=new Zip();<br>&ensp;&ensp;//Folder to be zipped (Source)<br>&ensp;&ensp;File sourceFile=new File("D:\\Test\\Source");<br><br>&ensp;&ensp;//Zip file Destination location and Zipfile name<br>&ensp;&ensp;File destinationFile=new File("D:\\Test\\Result.zip");<br><br>&ensp;&ensp;//Unzip location<br>
+&ensp;&ensp;File unzipLocation=new File("D:\\Test\\Destination");<br><br>&ensp;&ensp;try {<br>&ensp;&ensp;&ensp;if(destinationFile.isFile())<br>&ensp;&ensp;&ensp;destinationFile.delete();<br><br>&ensp;&ensp;&ensp;//Creates a zip file<br>&ensp;&ensp;&ensp;zipFolder.zip(sourceFile,destinationFile);<br> <br>&ensp;&ensp;&ensp;//UnZip a file<br>&ensp;&ensp;&ensp;zipFolder.unzip(destinationFile, unzipLocation);<br> <br>&ensp;&ensp;&ensp;} catch (IOException e) {<br>&ensp;&ensp;&ensp; e.printStackTrace();<br>&ensp;&ensp;}<br>&ensp;}<br>}</pre></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse86" style="text-decoration:none"><h4>How to encode or encrypt password in WebDriver?</h4></a></h4></div><div id="collapse86" class="panel-collapse collapse"><div class="panel-body">
+<p><pre class="prettyprint">import org.apache.commons.codec.binary.Base64;<br>import org.openqa.selenium.By;<br>import org.openqa.selenium.WebDriver;<br>import org.openqa.selenium.firefox.FirefoxDriver;<br>import java.io.File;<br>import java.io.FileInputStream;<br>import java.io.IOException;<br>import java.util.Properties;<br>import java.util.concurrent.TimeUnit;<br><br>public class Encrypt_PWD {<br><br>&ensp;//Create a 'data.properties' file and store password to be used<br>&ensp;//Download Base64 jar file and add jar file in project as external jar.<br>&ensp;/*Base64: Base64 is a group of similar binary-to-text encoding schemes<br>&ensp; * that represent binary data in an ASCII string format<br>&ensp; * by translating it into a radix-64 representation.<br>&ensp; * The term Base64 originates from a specific MIME content transfer encoding.*/<br><br>&ensp;public static void main(String[] arg) throws IOException {<br><br>&ensp; // Create FileInputStream Object<br>&ensp; FileInputStream fileInput = new FileInputStream(new File("D:\\data.properties"));<br>&ensp; // Create Properties object<br>&ensp; Properties prop = new Properties();<br>&ensp; //load properties file<br>&ensp; prop.load(fileInput);<br><br>&ensp; // create Firebox object<br>&ensp; WebDriver driver = new FirefoxDriver();<br>&ensp; //Go to URL<br>&ensp; driver.get("http://www.facebook.com");<br>&ensp; //Maximize browser window<br>&ensp; driver.manage().window().maximize();<br>&ensp; //Set timeout<br>&ensp; driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);<br><br>&ensp; driver.findElement(By.id("email")).clear();<br>&ensp; driver.findElement(By.id("email")).sendKeys(prop.getProperty("username"));<br><br>&ensp; driver.findElement(By.id("password")).clear();<br>&ensp; driver.findElement(By.id("password")).sendKeys(new String(Base64.encodeBase64(prop.getProperty("password").getBytes())));<br><br>&ensp; driver.findElement((By.id("boginbutton"))).click();<br>&ensp;<br>&ensp; //Print Encrypted Password<br>&ensp; System.out.println("Encrypted Password =: " + new String(Base64.encodeBase64(prop.getProperty("password").getBytes())));<br>&ensp; //Print Decrypted Password<br>&ensp; System.out.println("Decrypted Password =: " + new String(Base64.decodeBase64(Base64.encodeBase64(prop.getProperty("password").getBytes()))));<br>&ensp;<br>&ensp; //close firefox browser<br>&ensp; driver.close();<br>&ensp;}<br>}</pre></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse87" style="text-decoration:none"><h4>How to get Date and Time of a specific timezone?</h4></a></h4></div><div id="collapse87" class="panel-collapse collapse"><div class="panel-body">
+<p><pre class="prettyprint">import java.text.SimpleDateFormat;<br>import java.util.Date;<br>import java.util.TimeZone;<br><br><br>public class Date_Time {<br><br>&ensp;public static void main(String[] args) {<br> <br>&ensp;&ensp; // Local date and time<br>&ensp;&ensp;Date date = new Date(); <br>&ensp;&ensp;SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy hh:mm a");<br><br>&ensp;&ensp;// Get US/Eastern time<br>&ensp;&ensp;formatter.setTimeZone(TimeZone.getTimeZone("US/Eastern")); <br>&ensp;&ensp;// Prints the date in the US timezone <br>&ensp;&ensp;System.out.println("US/Eastern date & time : " +formatter.format(date)); <br><br><br>&ensp;&ensp;// Set the formatter to use a different timezone <br>&ensp;&ensp;formatter.setTimeZone(TimeZone.getTimeZone("IST")); <br>&ensp;&ensp;// Prints the date in the IST timezone <br>&ensp;&ensp;System.out.println("India date & time : " +formatter.format(date));<br><br>&ensp;&ensp; // To get all available Time-zones<br>&ensp;&ensp;String[] allTimeZones = TimeZone.getAvailableIDs(); <br>&ensp;&ensp;for (int i = 0; i < allTimeZones.length; i++) <br>&ensp;&ensp;{ <br>&ensp;&ensp;&ensp;System.out.println(allTimeZones[i]); <br>&ensp;&ensp;}<br><br>&ensp;}<br><br>}  </pre></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse88" style="text-decoration:none"><h4>How to highlight elements Selenium Webdriver using JavaScript?</h4></a></h4></div><div id="collapse88" class="panel-collapse collapse"><div class="panel-body">
+<p><pre class="prettyprint"> public class Element_Highlight {<br><br><br>public static void main(String []args){<br><br>&ensp;System.setProperty("webdriver.chrome.driver", "D:\\Eclipse\\Jars\\chromedriver_win32\\chromedriver.exe");<br>&ensp;WebDriver driver=new ChromeDriver();<br>&ensp;driver.manage().window().maximize();<br>&ensp;driver.get("http://www.facebook.com");<br><br>&ensp;// Find the element<br>&ensp;WebElement username= driver.findElement(By.id("email"));<br><br>&ensp;// Call Element highlighter method<br>&ensp;highLightElement(driver,username);<br><br>}<br><br>// Element highlighter method<br>public static void highLightElement(WebDriver driver, WebElement element)<br>&ensp;&ensp;{<br>&ensp;&ensp;&ensp;JavascriptExecutor js=(JavascriptExecutor)driver;<br><br>&ensp;&ensp;&ensp;js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);<br>&ensp;&ensp;try<br>&ensp;&ensp;{<br>&ensp;&ensp;&ensp;Thread.sleep(1000);<br>&ensp;&ensp;}<br>&ensp;&ensp;&ensp;catch (InterruptedException e) {<br><br>&ensp;&ensp;&ensp;System.out.println(e.getMessage());<br>&ensp;&ensp;}<br><br>&ensp;&ensp;&ensp;js.executeScript("arguments[0].setAttribute('style','border: solid 2px white');", element);<br>&ensp;&ensp;}<br><br>}</pre></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse89" style="text-decoration:none"><h4>How to select date from datepicker using Selenium WebDriver?</h4></a></h4></div><div id="collapse89" class="panel-collapse collapse"><div class="panel-body">
+<p> <pre class="prettyprint">public class Date_Picker {<br><br>&ensp;public static void main(String[] args) {<br><br>&ensp;&ensp;System.setProperty("webdriver.chrome.driver", "D:\\Eclipse\\Jars\\chromedriver_win32\\chromedriver.exe");<br>&ensp;&ensp;WebDriver driver=new ChromeDriver();<br>&ensp;&ensp;driver.manage().window().maximize();<br>&ensp;&ensp;driver.get("http://jqueryui.com/datepicker/");<br>&ensp;&ensp;driver.switchTo().frame(0);<br>&ensp;&ensp;driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);<br><br>&ensp;&ensp;//Click on textbox so that datepicker will come<br>&ensp;&ensp;driver.findElement(By.id("datepicker")).click();<br>&ensp;&ensp;driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);<br><br>&ensp;&ensp;//Click on next so that we will be in next month<br>&ensp;&ensp;driver.findElement(By.xpath(".//*[@id='ui-datepicker-div']/div/a[2]/span")).click();<br><br>&ensp;&ensp; /*DatePicker is a table.So navigate to each cell<br>&ensp;&ensp; * If a particular cell matches value 13 then select it<br>&ensp;&ensp; */<br>&ensp;&ensp; WebElement dateWidget = driver.findElement(By.id("ui-datepicker-div"));<br>&ensp;&ensp; List<webelement>rows=dateWidget.findElements(By.tagName("tr"));<br>&ensp;&ensp; List<webelement>columns=dateWidget.findElements(By.tagName("td"));<br><br>&ensp;&ensp; for (WebElement cell: columns){<br>&ensp;&ensp; //Select 6th Date<br>&ensp;&ensp; if (cell.getText().equals("6")){<br>&ensp;&ensp; cell.findElement(By.linkText("6")).click();<br>&ensp;&ensp; break;<br>&ensp;&ensp; }<br>&ensp;&ensp;}<br>&ensp;}<br>}</pre></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse90" style="text-decoration:none"><h4>Write a program to check if text is present on a page.</h4></a></h4></div><div id="collapse90" class="panel-collapse collapse"><div class="panel-body">
+<p>The solution to the above problem is to specify the location of FireFox in your script.<br>Here is a sample code:<br><br><pre class="prettyprint">WebDriver driver=new FirefoxDriver();<br>driver.get("http://www.cricinfo.com");<br>driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); <br><br>String pageSrc = driver.getPageSource();<br><br>String textToCheck = "cricket";<br><br>boolean isTextPresent = pageSrc.contains(textToCheck);<br><br>//result will be true if the text is present in the page<br>System.out.println("Result = " + isTextPresent);</pre></p></div></div></div>
+
+</div>
+  
+  
+  
+  
+
+
+
+
+
+	 <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="cordova.js"></script>
+  	<script type="text/javascript" src="../js/script.js" ></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+  	<script>
+	 prettyPrint();
+	</script> 
+	<script>
+		$('#accordion').on('shown.bs.collapse', function () {
+
+  		var panel = $(this).find('.in');
+
+  		$('html, body').animate({
+        	scrollTop: panel.offset().top + (-170)
+  		}, 100);
+
+		});
+	</script>
+  </body>
+</html>

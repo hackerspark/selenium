@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>TestNG</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	
+    <!-- Custom styles for this template -->
+    <link href="../css/custom.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="../prettify/prettify.js" ></script>
+	<link href="../prettify/prettify.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="custheader">
+          <h3>TestNG</h3>
+    </div>
+  </nav>
+  
+   <div class="panel-group" id="accordion">
+  
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="text-decoration:none"><h4>What is TestNG?</h4></a></h4></div><div id="collapse1" class="panel-collapse collapse"><div class="panel-body">
+<p>TestNG is a unit testing framework and inspired from JUnit and NUnit by adding new functionalities which made TestNG more powerful than other frameworks.</p></div></div></div>
+
+ <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="text-decoration:none"><h4>What are the benefits of using TestNG?</h4></a></h4></div><div id="collapse2" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>The benefits are:</strong><ol><li>Generate detailed HTML test reports</li><li>Run test cases in group</li><li>Parallel test execution</li><li>Control test case execution order</li><li>Parameterize Tests, etc.,</li></p></div></div></div>
+
+ <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="text-decoration:none"><h4>What is the difference between JUnit and TestNG?</h4></a></h4></div><div id="collapse3" class="panel-collapse collapse"><div class="panel-body">
+<p>
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+<table class="tftable" border="1">
+<tr><th>No</th><th>JUnit</th><th>TestNG</th></tr>
+<tr><td>1</td><td>The naming convention for annotation is a bit complicated for, e.g., “Before”, “After” and “Expected”.</td><td>It is easier to understand annotations like “BeforMethod”, “AfterMethod” and “ExpectedException”.</td></tr>
+<tr><td>2</td><td>JUnit does not have “Parameterized Test” or “Dependency Test” feature.</td><td>TestNG use “dependOnMethods” to implement the dependency testing.</td></tr>
+<tr><td>3</td><td>In JUnit grouping of test cases are not available.</td><td>In TestNG, grouping of test cases is available.</td></tr>
+</table></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="text-decoration:none"><h4>List out various ways in which TestNG can be invoked?</h4></a></h4></div><div id="collapse4" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>TestNG can be invoked in different ways like:</strong><br><ul><li>Using Eclipse</li><li>With ant</li><li>From the command line</li><li>Using IntelliJ’s IDEA</li></ul>
+</p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5" style="text-decoration:none"><h4>List down TestNG Annotations?</h4></a></h4></div><div id="collapse5" class="panel-collapse collapse"><div class="panel-body">
+<p><strong>TestNG annotations are:</strong><br><br>
+<strong>@BeforeSuite:</strong>The annotated method will be run before all tests in this suite have run. <br><br>
+<strong>@AfterSuite:</strong> The annotated method will be run after all tests in this suite have run. <br><br>
+<strong>@BeforeTest:</strong> The annotated method will be run before any test method belonging to the classes inside the <test> tag is run. <br><br>
+<strong>@AfterTest:</strong> The annotated method will be run after all the test methods belonging to the classes inside the <test> tag have run. <br><br>
+<strong>@BeforeGroups:</strong> The list of groups that this configuration method will run before. This method is guaranteed to run shortly before the first test method that belongs to any of these groups is invoked. <br><br>
+<strong>@AfterGroups:</strong> The list of groups that this configuration method will run after. This method is guaranteed to run shortly after the last test method that belongs to any of these groups is invoked. <br><br>
+<strong>@BeforeClass:</strong> The annotated method will be run before the first test method in the current class is invoked. <br><br>
+<strong>@AfterClass:</strong> The annotated method will be run after all the test methods in the current class have been run. <br><br>
+<strong>@BeforeMethod:</strong> The annotated method will be run before each test method. <br><br>
+<strong>@AfterMethod:</strong> The annotated method will be run after each test method.<br><br>
+<strong>@DataProvider:</strong> Marks a method as supplying data for a test method. The annotated method must return an Object[][] where each Object[] can be assigned the parameter list of the test method. The @Test method that wants to receive data from this DataProvider needs to use a dataProvider name equals to the name of this annotation.<br><br>
+<strong>@Factory:</strong> Marks a method as a factory that returns objects that will be used by TestNG as Test classes. The method must return Object[].<br><br>
+<strong>@Listeners:</strong> Defines listeners on a test class.<br><br>
+<strong>@Parameters:</strong> Describes how to pass parameters to a @Test method.<br><br>
+<strong>@Test:</strong> Marks a class or a method as part of the test.<br></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6" style="text-decoration:none"><h4>What are the different ways in which you can produce reports for TestNG results?</h4></a></h4></div><div id="collapse6" class="panel-collapse collapse"><div class="panel-body"><p><strong>There are two ways to produce a report with TestNG, they are:</strong><br><ul><li><strong>Listeners:</strong> For a listener class to implement, the class has to implement the org.testng.TestListener interface. These classes are informed at runtime by TestNG when the test begins, finishes, skips, passes or fails.</li><li><strong>Reporters:</strong> For a reporting class to implement, the class has to implement an org.testng.Reporter interface. When the whole suite run ends, these classes are called. When called, the object consisting the information of the whole test run is delivered to this class.</li></ul></p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse7" style="text-decoration:none"><h4>What is @DataProvider annotation?</h4></a></h4></div><div id="collapse7" class="panel-collapse collapse"><div class="panel-body"><p><strong>@DataProvider:</strong> Marks a method as supplying data for a test method. The annotated method must return an Object[][] where each Object[] can be assigned the parameter list of the test method. The @Test method that wants to receive data from this DataProvider needs to use a dataProvider name equals to the name of this annotation.</p>
+<pre class="prettyprint">public class DataProviderExample{<br><br>&ensp;@Test(dataProvider="getData")<br>&ensp;public void setData(String username, String password){<br><br>&ensp;&ensp;System.out.println("Username: "+username);<br>&ensp;&ensp;System.out.println("PWD:"+password);<br>&ensp;}<br><br>&ensp;@DataProvider<br>&ensp;public Object[][] getData(){<br>&ensp;//Rows - No of test iteration.<br>&ensp;//Columns - No of parameters in test data.<br>&ensp;Object[][] data=new Object[3][2];<br><br>&ensp;// 1st row<br>&ensp;data[0][0]="user1";<br>&ensp;data[0][1]="pwd1";<br><br>&ensp;// 2nd row<br>&ensp;data[1][0]="user2";<br>&ensp;data[1][1]="pwd2";<br><br>&ensp;// 3rd row<br>&ensp;data[2][0]="user3";<br>&ensp;data[2][1]="pwd3";<br><br>&ensp;return data;<br>&ensp;}<br>}</pre></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse8" style="text-decoration:none"><h4>How do you prioritize your test case in TestNG?</h4></a></h4></div><div id="collapse8" class="panel-collapse collapse"><div class="panel-body"><p>You can set priority for TestNG @Test annotated methods as bellow.<br><br><strong>@Test(priority=0)</strong><br><br>Using priority, We can control @Test method execution manner as per our requirement. That means @Test method with priority = 0 will be executed 1st and @Test method with priority = 1 will be executed 2nd and so on.<br><br><strong>Sample Code:</strong><br></p>
+<pre class="prettyprint">public class setPriorityExample{<br><br>&ensp;@Test(priority=0)<br>&ensp;public void Test1(){<br>&ensp;&ensp;System.out.println("This test will run first."); <br>&ensp;}<br><br>&ensp;@Test(priority=2)<br>&ensp;public void Test2(){<br>&ensp;&ensp;System.out.println("This test will run third."); <br>&ensp;}<br><br>&ensp;@Test(priority=1)<br>&ensp;public void Test3(){<br>&ensp;&ensp;System.out.println("This test will run second."); <br>&ensp;}<br>}</pre></div></div></div>
+
+  
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse9" style="text-decoration:none"><h4>What is timeout in TestNG?</h4></a></h4></div><div id="collapse9" class="panel-collapse collapse"><div class="panel-body"><p>The maximum number of milliseconds the test should take.<br><br><strong>Sample Code:</strong><pre class="prettyprint">@Test(timeOut=1000) // time in milliseconds<br>public void timeOutExample(){<br>&ensp;&ensp;System.out.println("Timeout test"); <br>}</pre><br>The above test should be executed within 1000 milliseconds. Other test will be failed.</p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse10" style="text-decoration:none"><h4>How do you skip a test in TestNG?</h4></a></h4></div><div id="collapse10" class="panel-collapse collapse"><div class="panel-body"><p><strong>@Test(enabled=false)</strong> annotation is used to skip a test case if it is not ready to test.</p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse11" style="text-decoration:none"><h4>What is expected annotation?</h4></a></h4></div><div id="collapse11" class="panel-collapse collapse"><div class="panel-body"><p>We use "expected" with @Test annotation and specify the type of exceptions that are expected to be thrown when executing the test methods.<br><br>The below example which throws an exception called “ArithmeticException” when dividing two numbers with denominator value as 0. The test will pass since we handled the exception by “expected” annotation.<pre class="prettyprint">@Test(expected=ArithmeticException.class)<br>public void dividedByZeroEx(){<br>&ensp;&ensp;int e=1/0;<br>}</pre><br>When you run the test without “(expected = ArithmeticException.class)”, then it will throw the exception “java.lang.ArithmeticException: / by zero”. And the test will fail.<br><br><pre class="prettyprint">@Test<br>public void dividedByZeroExample2(){<br>&ensp;&ensp;int e=1/0;<br>}<br></pre></p></div></div></div>
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse12" style="text-decoration:none"><h4>What is syntax to set test method dependency for multiple test methods?</h4></a></h4></div><div id="collapse12" class="panel-collapse collapse"><div class="panel-body"><p>We can set test method's dependency on multiple test methods as bellow.<br><br><pre class="prettyprint">@Test(dependsOnMethods={"Login","checkMail"})<br>public void Logout(){<br>&ensp;&ensp;System.out.println("Logout Test."); <br>}</pre>We set dependency on @Test methods to skip its execution if the depending on method fails.</p></div></div></div>
+
+
+<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse13" style="text-decoration:none"><h4>How do you execute group test cases in TestNG?</h4></a></h4></div><div id="collapse13" class="panel-collapse collapse"><div class="panel-body"><p>We can execute only set of group and exclude another set. This gives us the maximum flexibility in divide tests and doesn't require us to recompile anything if you want to run two different set of tests back to back. Groups are specified in testng.xml file.<br><br><strong>Sample Code:</strong><pre class="prettyprint">public class groupExamples{<br><br>&ensp;@Test(groups="Regression")<br>&ensp;public void testCaseOne(){<br>&ensp;&ensp;System.out.println("Regression Group");<br>&ensp;}<br><br>&ensp;@Test(groups="Regression")<br>&ensp;public void testCaseTwo(){<br>&ensp;&ensp;System.out.println("Regression Group");<br>&ensp;}<br><br>&ensp;@Test(groups="Retest")<br>&ensp;public void testCaseThree(){<br>&ensp;&ensp;System.out.println("Retest Group");<br>&ensp;}<br><br>&ensp;@Test(groups="Regression")<br>&ensp;public void testCaseFour(){<br>&ensp;&ensp;System.out.println("Retest Group");<br>&ensp;}<br>}</pre></p></div></div></div>
+
+  <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse14" style="text-decoration:none"><h4>How do you preserve order in TestNG?</h4></a></h4></div><div id="collapse14" class="panel-collapse collapse"><div class="panel-body"><p>By default, TestNG will run your tests in the order they are found in the XML file. If you want the classes and methods listed in this file to be run in an unpredictable order, set the preserve-order attribute to false</p></div></div></div>
+  
+    <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse15" style="text-decoration:none"><h4>How to use assertions in TestNG explain with one example?</h4></a></h4></div><div id="collapse15" class="panel-collapse collapse"><div class="panel-body"><p>There are many different assertions available In TestNG but few important assertions are:<br><ol><li>assertEquals </li><li>assertNotEquals</li><li>assertTrue </li><li>assertFalse</li><li>assertNull  </li><li>assertNotNull</li></ol><br><strong>Assert.assertEquals(actual, expected):</strong><br>This assertion is used to compare expected and actual values in selenium WebDriver. If both values are same  then it will continue execution. But if fails then immediately it will mark the test method as fail and exit from that test method.<br><br><strong>Sample Code:</strong><br><pre class="prettyprint">@Test<br>&ensp;public void assertCheck(){<br>&ensp;&ensp;WebDriver driver=new FirefoxDriver();<br>&ensp;&ensp;driver.navigate().to("http://gmail.com");<br>&ensp;&ensp;Assert.assertEquals("Gmail", driver.getTitle());<br>&ensp;}</pre><br>The above test will pass since both value matches.</p></div></div></div>
+  
+  
+
+
+
+
+
+	 <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="cordova.js"></script>
+  	<script type="text/javascript" src="../js/script.js" ></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+  	<script>
+	 prettyPrint();
+	</script> 
+	<script>
+		$('#accordion').on('shown.bs.collapse', function () {
+
+  		var panel = $(this).find('.in');
+
+  		$('html, body').animate({
+        	scrollTop: panel.offset().top + (-170)
+  		}, 100);
+
+		});
+	</script>
+  </body>
+</html>
